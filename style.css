@@ -1,130 +1,300 @@
-/* Estilo base */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fffaf7;
+/* style.css */
+
+/* Fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap');
+
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  color: #3a3a3a;
+  box-sizing: border-box;
 }
 
-header {
-  background: #f8e8d6;
-  padding: 20px;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fdf8f5;
+  color: #444;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Contenedor general */
+body > header,
+section,
+footer {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  background-color: #fff;
+  border-bottom: 2px solid #f0c6a9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #a25a33;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #d9843b;
+  outline: none;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Countdown */
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: rgba(255 255 255 / 0.4);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: #6a4a2e;
+  text-shadow: none;
+}
+
+#countdown div {
+  min-width: 60px;
+  background: #f0c6a9;
+  border-radius: 15px;
+  padding: 0.3rem 0;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+#countdown span {
+  font-size: 1.8rem;
+  display: block;
+  color: #5a3e1b;
+}
+
+/* Botón */
+.btn {
+  background-color: #d9843b;
+  color: white;
+  padding: 0.75rem 2.5rem;
+  font-weight: 700;
+  border-radius: 40px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 5px 8px rgba(217, 132, 59, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #a25a33;
+  box-shadow: 0 8px 15px rgba(162, 90, 51, 0.7);
+  outline: none;
+}
+
+/* Sección Nuestros Padres */
+#padres {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  margin-top: 3rem;
+}
+
+#padres h2 {
+  font-size: 2rem;
+  color: #a25a33;
+  margin-bottom: 1.5rem;
+}
+
+.padres {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-style: italic;
+  color: #7a5a3a;
+  font-size: 1.2rem;
+}
+
+.padres div p {
+  margin-bottom: 0.5rem;
+}
+
+/* Itinerario */
+#itinerario h2 {
+  font-family: 'Playfair Display', serif;
+  color: #a25a33;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-nav {
+.evento {
+  background: #fff8f1;
+  border: 1px solid #f0c6a9;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(217, 132, 59, 0.1);
+  text-align: center;
+}
+
+.evento h3 {
+  margin-bottom: 0.3rem;
+  color: #d9843b;
+}
+
+.evento p {
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.evento a.mapa-link {
+  color: #a25a33;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.evento a.mapa-link:hover,
+.evento a.mapa-link:focus {
+  color: #d9843b;
+  outline: none;
+}
+
+/* Dress Code */
+#codigo-vestimenta {
+  background: #fff3e6;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin: 3rem 0;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  color: #7a5a3a;
+}
+
+#codigo-vestimenta h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.6rem;
+  color: #a25a33;
+}
+
+/* Galería */
+#galeria {
+  margin-bottom: 3rem;
+}
+
+#galeria h2 {
+  font-family: 'Playfair Display', serif;
+  color: #a25a33;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.galeria {
   display: flex;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #fff1e5;
-  padding: 10px 0;
 }
 
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #8b5e3c;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-h1, h2, h3 {
-  color: #8b5e3c;
-  text-align: center;
-}
-
-.countdown {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-size: 24px;
-  margin: 30px 0;
-}
-
-.section {
-  padding: 40px 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.section p, .section li {
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #d4a373;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 10px auto;
-  text-align: center;
-}
-
-.itinerary-item {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.itinerary-item h3 {
-  margin-bottom: 5px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.form-section {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-form input, form textarea, form select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-form button {
-  background-color: #b5651d;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+.galeria img {
+  max-width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(217, 132, 59, 0.2);
+  transition: transform 0.3s ease;
   cursor: pointer;
-  font-size: 16px;
 }
 
-footer {
-  background-color: #fff1e5;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
+.galeria img:hover {
+  transform: scale(1.05);
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+/* No Niños */
+#no-ninos {
+  background: #f7d1b7;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: #7a5a3a;
+  font-weight: 700;
   text-align: center;
-  background-color: #fff; /* o el color que uses */
-  padding: 10px 0;
-  font-size: 14px;
-  color: #555;
-  box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
 }
+
+/* Mesa de Regalos */
+#regalos {
+  background: #fff8f1;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(217, 132, 59, 0.1);
+}
+
+#regalos h2 {
+  font-family: 'Playfair Display', serif;
+  color: #a25a33;
+  margin-bottom: 1rem;
+}
+
+#regalos p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#regalos a.btn-regalo {
+  background-color: #d9843b;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#regalos a.btn-regalo:hover,
+#regalos a.btn-regalo:focus {
+  background-color: #a25a33;
+  outline: none;
+}
+
+/* Hospedaje */
+#hospedaje {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#hospedaje h2 {
+  font-family: 'Playfair Display', serif;
