@@ -2,57 +2,196 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitación de Boda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jessica & Adrián - Invitación de Boda</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- HEADER Y NAVEGACIÓN -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">INICIO</a></li>
+        <li><a href="#confirmacion">CONFIRMA TU ASISTENCIA</a></li>
+        <li><a href="#regalos">MESA DE REGALOS</a></li>
+        <li><a href="#itinerario">ITINERARIO</a></li>
+        <li><a href="#galeria">GALERÍA</a></li>
+        <li><a href="#hospedaje">HOSPEDAJE</a></li>
+      </ul>
+    </nav>
 
-  <header class="hero">
-    <h1>Miriam & Luis</h1>
-    <p>¡Nos casamos!</p>
-    <p class="date">16 de agosto de 2025</p>
+    <div class="hero" id="inicio">
+      <h1>JESSICA & ADRIÁN</h1>
+      <p>18 DE MARZO DEL 2026</p>
+      <div id="countdown">
+        <div><span id="days">303</span> Día(s)</div>
+        <div><span id="hours">00</span> Hora(s)</div>
+        <div><span id="minutes">42</span> Minuto(s)</div>
+        <div><span id="seconds">38</span> Segundo(s)</div>
+      </div>
+      <a href="#confirmacion" class="btn">CONFIRMA TU ASISTENCIA</a>
+    </div>
   </header>
 
-  <section class="countdown">
-    <h2>Faltan...</h2>
-    <div id="timer">
-      <div><span id="days">00</span><p>días</p></div>
-      <div><span id="hours">00</span><p>horas</p></div>
-      <div><span id="minutes">00</span><p>minutos</p></div>
-      <div><span id="seconds">00</span><p>segundos</p></div>
+  <!-- SECCIÓN NUESTROS PADRES -->
+  <section id="padres">
+    <h2>NUESTROS PADRES</h2>
+    <div class="padres">
+      <div>
+        <p>Irma Vélez González</p>
+        <p>Marco Talamantes Sánchez</p>
+      </div>
+      <div>
+        <p>Silvia Torres Montalvo</p>
+        <p>José Alfredo Hinojos Guillen</p>
+      </div>
     </div>
   </section>
 
-  <section class="evento">
-    <h2>Detalles del Evento</h2>
-    <div class="detalle">
-      <h3>Ceremonia</h3>
-      <p>5:00 PM - Iglesia San Juan</p>
+  <!-- SECCIÓN ITINERARIO -->
+  <section id="itinerario">
+    <h2>ITINERARIO</h2>
+
+    <div class="evento">
+      <h3>CEREMONIA</h3>
+      <p>Hacienda Dos Mezquites - 6:00 PM</p>
+      <a href="#" class="mapa-link">VER MAPA</a>
     </div>
-    <div class="detalle">
-      <h3>Recepción</h3>
-      <p>7:00 PM - Jardín La Encantada</p>
-      <a href="https://www.google.com/maps" target="_blank">Ver mapa</a>
+
+    <div class="evento">
+      <h3>RECEPCIÓN</h3>
+      <p>Hacienda Dos Mezquites - 7:00 PM</p>
+      <a href="#" class="mapa-link">VER MAPA</a>
+    </div>
+
+    <div class="evento">
+      <h3>CENA</h3>
+      <p>Hacienda Dos Mezquites - 8:00 PM</p>
+      <a href="#" class="mapa-link">VER MAPA</a>
+    </div>
+
+    <div class="evento">
+      <h3>¡FIESTA!</h3>
+      <p>Hacienda Dos Mezquites - 9:00 PM</p>
+      <a href="#" class="mapa-link">VER MAPA</a>
     </div>
   </section>
 
-  <section class="vestimenta">
-    <h2>Código de Vestimenta</h2>
-    <p>Formal - Colores neutros</p>
+  <!-- DRESS CODE -->
+  <section id="codigo-vestimenta">
+    <h2>DRESS CODE</h2>
+    <p><strong>Mujeres:</strong> Vestido Largo de Noche</p>
+    <p><strong>Hombres:</strong> Traje Completo Formal</p>
   </section>
 
-  <section class="rsvp">
-    <h2>Confirma tu asistencia</h2>
+  <!-- GALERÍA -->
+  <section id="galeria">
+    <h2>GALERÍA</h2>
+    <div class="galeria">
+      <img src="img1.jpg" alt="Foto 1" />
+      <img src="img2.jpg" alt="Foto 2" />
+      <img src="img3.jpg" alt="Foto 3" />
+    </div>
+  </section>
+
+  <!-- NO NIÑOS -->
+  <section id="no-ninos">
+    <p><strong>NO NIÑOS</strong></p>
+    <p>Aunque amamos a sus pequeños, hagan de este día una cita y pasémosla increíble.</p>
+  </section>
+
+  <!-- MESA DE REGALOS -->
+  <section id="regalos">
+    <h2>MESA DE REGALOS</h2>
+    <p>Su presencia y compañía siempre será nuestro mejor regalo.</p>
+    <p>Sin embargo, si desean obsequiarnos algo más, pueden hacerlo a través de:</p>
+    <a href="#" class="btn-regalo">IR A MESA</a>
+
+    <p>Puedes hacernos tu obsequio en la siguiente cuenta bancaria:</p>
+    <p>
+      <strong>BBVA</strong><br />
+      Tarjeta: 4152 3134 8425 1918<br />
+      Cuenta: 152 093 3913<br />
+      Adrián Acosta López
+    </p>
+  </section>
+
+  <!-- HOSPEDAJE -->
+  <section id="hospedaje">
+    <h2>HOSPEDAJE</h2>
+    <p>Queremos que tu estancia sea inolvidable, te compartimos algunas opciones de hospedaje:</p>
+    <ul>
+      <li>City Express Plus by Marriott Mérida - <a href="#">VER HOTEL</a></li>
+      <li>Hotel NH Collection Merida Paseo Montejo - <a href="#">VER HOTEL</a></li>
+    </ul>
+  </section>
+
+  <!-- CLIMA -->
+  <section id="clima">
+    <h2>Mérida</h2>
+    <p>36°C - Nublado<br />3.9 m/s - 34% - 756 mmHg</p>
+    <p><em>Te amo, así de simple, así de siempre</em></p>
+  </section>
+
+  <!-- FORMULARIO CONFIRMAR ASISTENCIA -->
+  <section id="confirmacion">
+    <h2>CONFIRMAR ASISTENCIA</h2>
+    <p>Confirma tu asistencia antes del día 15 de Febrero</p>
+
     <form>
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="number" placeholder="Número de invitados" required />
-      <button type="submit">Confirmar</button>
+      <fieldset>
+        <legend>¿Asistirás? *</legend>
+        <label>
+          <input type="radio" name="asistencia" value="si" required />
+          Sí
+        </label>
+        <label>
+          <input type="radio" name="asistencia" value="no" />
+          No
+        </label>
+      </fieldset>
+
+      <label for="nombre">Tu Nombre *</label><br />
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Escribe tu nombre aquí"
+        required
+      /><br /><br />
+
+      <label for="acompanantes">Nombre de tus acompañantes</label><br />
+      <input
+        type="text"
+        id="acompanantes"
+        name="acompanantes"
+        placeholder="Escribe tus acompañantes aquí"
+      /><br /><br />
+
+      <label for="telefono">Teléfono</label><br />
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        placeholder="Ejemplo: +1 300 400 5000"
+      /><br /><br />
+
+      <fieldset>
+        <legend>¿Qué se toman chicos?</legend>
+        <label><input type="checkbox" name="bebida" value="vino" /> Vino</label>
+        <label><input type="checkbox" name="bebida" value="tequila" /> Tequila</label>
+        <label><input type="checkbox" name="bebida" value="whisky" /> Whisky</label>
+        <label><input type="checkbox" name="bebida" value="cerveza" /> Cerveza</label>
+      </fieldset>
+      <br />
+
+      <button type="submit" class="btn">CONFIRMAR</button>
     </form>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>Gracias por acompañarnos en este día tan especial 💖</p>
+    <p>&copy; 2026 Jessica & Adrián</p>
   </footer>
 
   <script src="script.js"></script>

@@ -1,82 +1,130 @@
+/* Estilo base */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    background: #fef9f6;
-    color: #333;
-  }
-  
-  .hero {
-    background: #f4e3e3;
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .hero .date {
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  
-  .countdown {
-    padding: 30px 20px;
-    text-align: center;
-    background: #fff;
-  }
-  
-  #timer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  #timer div {
-    background: #fcefe3;
-    padding: 10px;
-    border-radius: 8px;
-  }
-  
-  #timer span {
-    font-size: 32px;
-    font-weight: bold;
-  }
-  
-  .evento, .vestimenta, .rsvp {
-    padding: 30px 20px;
-    text-align: center;
-  }
-  
-  .detalle {
-    margin-bottom: 15px;
-  }
-  
-  .rsvp form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .rsvp input {
-    margin: 10px;
-    padding: 10px;
-    width: 80%;
-    max-width: 300px;
-  }
-  
-  .rsvp button {
-    padding: 10px 20px;
-    background-color: #e39aa1;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  footer {
-    padding: 20px;
-    background: #f4e3e3;
-    text-align: center;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf7;
+  margin: 0;
+  padding: 0;
+  color: #3a3a3a;
+}
+
+header {
+  background: #f8e8d6;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fff1e5;
+  padding: 10px 0;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #8b5e3c;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  color: #8b5e3c;
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+  margin: 30px 0;
+}
+
+.section {
+  padding: 40px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.section p, .section li {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d4a373;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.itinerary-item {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.itinerary-item h3 {
+  margin-bottom: 5px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.form-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #b5651d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #fff1e5;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fff; /* o el color que uses */
+  padding: 10px 0;
+  font-size: 14px;
+  color: #555;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+}
