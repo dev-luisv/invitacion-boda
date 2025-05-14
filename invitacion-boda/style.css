@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #fef9f6;
+    color: #333;
+  }
+  
+  .hero {
+    background: #f4e3e3;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero .date {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .countdown {
+    padding: 30px 20px;
+    text-align: center;
+    background: #fff;
+  }
+  
+  #timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  #timer div {
+    background: #fcefe3;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  #timer span {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .evento, .vestimenta, .rsvp {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .detalle {
+    margin-bottom: 15px;
+  }
+  
+  .rsvp form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .rsvp input {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  .rsvp button {
+    padding: 10px 20px;
+    background-color: #e39aa1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer {
+    padding: 20px;
+    background: #f4e3e3;
+    text-align: center;
+  }
