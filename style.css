@@ -58,7 +58,7 @@ nav ul li a:focus {
 .hero {
   text-align: center;
   padding: 4rem 1rem 3rem;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+  background: url('Imagen1.jpeg') no-repeat center center/cover;;
   color: #fff;
   font-family: 'Playfair Display', serif;
   border-radius: 8px;
@@ -126,20 +126,45 @@ nav ul li a:focus {
   outline: none;
 }
 
-/* Sección Nuestros Padres */
-#padres {
+/* Sección Frase 1*/
+#Frase1 {
   text-align: center;
   font-family: 'Playfair Display', serif;
   margin-top: 3rem;
 }
 
-#padres h2 {
+#Frase1 h2 {
   font-size: 2rem;
-  color: #a25a33;
+  color: #0f0f0f;
   margin-bottom: 1.5rem;
 }
 
-.padres {
+.Frase1 {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-style: italic;
+  color: #0e0d0d;
+  font-size: 1.2rem;
+}
+
+.Frase1 div p {
+  margin-bottom: 0.5rem;
+}
+
+#Frase1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  margin-top: 3rem;
+}
+
+#Frase1 h2 {
+  font-size: 2rem;
+  color: #131212;
+  margin-bottom: 1.5rem;
+}
+
+.Frase1 {
   display: flex;
   justify-content: center;
   gap: 4rem;
@@ -148,10 +173,61 @@ nav ul li a:focus {
   font-size: 1.2rem;
 }
 
-.padres div p {
+.Frase1 div p {
   margin-bottom: 0.5rem;
 }
 
+/* Sección Frase 2*/
+#Frase2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  margin-top: 3rem;
+}
+
+#Frase2 h2 {
+  font-size: 2rem;
+  color: #a25a33;
+  margin-bottom: 1.5rem;
+}
+
+.Frase2 {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-style: italic;
+  color: #7a5a3a;
+  font-size: 1.2rem;
+}
+
+.Frase2 div p {
+  margin-bottom: 0.5rem;
+}
+
+* Sección Nuestros Padres */
+#Frase2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  margin-top: 3rem;
+}
+
+#Frase2 h2 {
+  font-size: 2rem;
+  color: #a25a33;
+  margin-bottom: 1.5rem;
+}
+
+.Frase2 {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-style: italic;
+  color: #7a5a3a;
+  font-size: 1.2rem;
+}
+
+.Frase2 div p {
+  margin-bottom: 0.5rem;
+}
 /* Itinerario */
 #itinerario h2 {
   font-family: 'Playfair Display', serif;
