@@ -7,9 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HEADER Y NAVEGACIÓN -->
   <header>
-    <nav>
+    <nav class="menu-principal">
       <ul>
         <li><a href="#inicio">INICIO</a></li>
         <li><a href="#confirmacion">CONFIRMA TU ASISTENCIA</a></li>
@@ -17,30 +16,45 @@
         <li><a href="#itinerario">ITINERARIO</a></li>
       </ul>
     </nav>
+  </header>
 
-  <!-- Inicio -->
   <section id="Frase1">
-    <h2>El amor es solo una palabra, hasta que llega alguien y le da sentido.</h2>
- 
-
-
-    <div class="hero" id="inicio">
+    <h2 class="frase2">El amor es solo una palabra, hasta que llega alguien y le da sentido.</h2>
+  </section>
+<div class="hero" id="inicio">
       <h1>Miriam & Luis</h1>
       <p>¡Nos casamos!</p>
       <p>16 DE AGOSTO DEL 2025</p>
-      <div id="countdown">
-        <div><span id="days">303</span> Día(s)</div>
-        <div><span id="hours">00</span> Hora(s)</div>
-        <div><span id="minutes">42</span> Minuto(s)</div>
-        <div><span id="seconds">38</span> Segundo(s)</div>
-      </div>
-      <a href="#confirmacion" class="btn">CONFIRMA TU ASISTENCIA</a>
+  </section>   
+  <section id="countdown-container">
+  <div class="countdown">
+    <div class="time-box">
+      <span id="days">92</span>
+      <small>Día(s)</small>
     </div>
-  </header>
+    <div class="separator">:</div>
+    <div class="time-box">
+      <span id="hours">22</span>
+      <small>Hora(s)</small>
+    </div>
+    <div class="separator">:</div>
+    <div class="time-box">
+      <span id="minutes">20</span>
+      <small>Minuto(s)</small>
+    </div>
+    <div class="separator">:</div>
+    <div class="time-box">
+      <span id="seconds">12</span>
+      <small>Segundo(s)</small>
+    </div>
+  </div>
+</section>
+    <a href="#confirmacion" class="btn">CONFIRMA TU ASISTENCIA</a>
+  </section>
 
   <section id="Frase2">
-    <h2>Hay momentos en la vida que son muy especiales por sí solos, pero al compartirlo con personas tan especiales como tú se convierten en momentos imposibles de olvidar.</h2>
-
+    <h2 class="frase2">Hay momentos en la vida que son muy especiales por sí solos, pero al compartirlo con personas tan especiales como tú se convierten en momentos imposibles de olvidar.</h2>
+  </section>
   <!-- SECCIÓN ITINERARIO -->
   <section id="itinerario">
     <h2>ITINERARIO</h2>
@@ -48,35 +62,25 @@
     <div class="evento">
       <h3>CEREMONIA CIVIL</h3>
       <p>Quinta Los Arcos- 5:30 PM</p>
-      <a href="#" class="mapa-link">VER MAPA</a>
     </div>
-
     <div class="evento">
       <h3>RECEPCIÓN</h3>
       <p>Quinta Los Arcos- 6:30 PM</p>
-      <a href="#" class="mapa-link">VER MAPA</a>
     </div>
-
     <div class="evento">
       <h3>CENA</h3>
       <p>Quinta Los Arcos- 7:00 PM</p>
-      <a href="#" class="mapa-link">VER MAPA</a>
     </div>
-
     <div class="evento">
       <h3>¡FIESTA!</h3>
       <p>Quinta Los Arcos- 9:00 PM</p>
-      <a href="#" class="mapa-link">VER MAPA</a>
     </div>
   </section>
-
-  <!-- DRESS CODE -->
   <section id="codigo-vestimenta">
-    <h2>Còdigo-vestimenta</h2>
-    <p><strong>Semiformal/Cocktail</p>
+    <h2>Código de vestimenta</h2>
+    <p><strong>Semiformal / Cocktail</strong></p>
   </section>
 
-  <!-- GALERÍA -->
   <section id="galeria">
     <div class="galeria">
       <img src="img1.jpeg" alt="Foto 1" />
@@ -84,32 +88,23 @@
     </div>
   </section>
 
-  <!-- MESA DE REGALOS -->
   <section id="regalos">
     <h2>MESA DE REGALOS</h2>
     <p>¡El regalo es opcional, la asistencia obligatoria!</p>
     <p>Pero si quieres tener un detalle con nosotros, ¡suma kilómetros a nuestro viaje!</p>
     <a href="#" class="btn-regalo">IR A MESA</a>
+    <p><strong>BANORTE</strong><br>Tarjeta: 4189 1432 3184 7420<br>Miriam Uribe Mendez</p>
+  </section>
 
-    <p>Puedes hacernos tu obsequio en la siguiente cuenta bancaria:</p>
-    <p>
-      <strong>BANORTE</strong><br />
-      Tarjeta: 4189 1432 3184 7420<br />
-      Miriam Uribe Mendez
-    </p>
-
-  <!-- FORMULARIO CONFIRMAR ASISTENCIA -->
   <section id="confirmacion">
     <h2>CONFIRMAR ASISTENCIA</h2>
     <p>Confirma tu asistencia antes del día 31 de Junio</p>
-
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfFk00WKkrPu_9TjwqMDnrX3wpyGT_Fb5W_wodyWa-_04mqKw/viewform?embedded=true" width="640" height="1739" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-
-      Cargando…
-  </iframe>
+    <div class="form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfFk00WKkrPu_9TjwqMDnrX3wpyGT_Fb5W_wodyWa-_04mqKw/viewform?embedded=true"
+              frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Miriam & Luis</p>
   </footer>

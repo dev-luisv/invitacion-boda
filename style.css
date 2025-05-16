@@ -1,376 +1,276 @@
-/* style.css */
-
-/* Fuente de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap');
-
-/* Reset básico */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+.menu-principal {
+  background-color: #fdf5f5; /* Color muy claro y suave */
+  padding: 1.5rem 0;
+  border-bottom: 2px solid #d8a1c4;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu-principal ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.menu-principal li {
+  margin: 0;
+}
+
+.menu-principal a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #8B2500;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.menu-principal a:hover {
+  color: #c2185b;
+  text-decoration: underline;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: #fdf8f5;
-  color: #444;
+  font-style: italic;
   line-height: 1.6;
-  min-height: 100vh;
+  background: #fff;
+  color: #c2185b;
+  padding: 4rem 1rem 3rem;
+  border-radius: 8px;
+  font-weight: normal;
 }
 
-/* Contenedor general */
-body > header,
-section,
-footer {
-  max-width: 900px;
-  margin: 0 auto 3rem;
-  padding: 0 1rem;
+header {
+  background: #d8abd4;
+  padding: 1rem 0;
+  text-align: center;
 }
 
-/* Navegación */
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
-  gap: 1.5rem;
-  padding: 1rem 0;
-  background-color: #fff;
-  border-bottom: 2px solid #f0c6a9;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  flex-wrap: wrap;
+  gap: 1rem; /* Este es el espacio entre los elementos */
+  padding: 0;
 }
 
-nav ul li a {
+nav a {
+  color: #776a6a;
   text-decoration: none;
-  font-weight: 600;
-  color: #a25a33;
-  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-  color: #d9843b;
-  outline: none;
-}
-
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 4rem 1rem 3rem;
   background: url('Imagen1.jpeg') no-repeat center center/cover;;
-  color: #fff;
+  color: #776a6a;
   font-family: 'Playfair Display', serif;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(205, 226, 12, 0.2);
+  min-height: 200px; /* o la altura que quieras */
+  max-height: 500px; /* opcional */
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 0.3rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
 }
 
-/* Countdown */
-#countdown {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+.frase1 {
+  font-size: 2rem;
   margin-bottom: 2rem;
-  font-weight: 700;
-  font-size: 1.1rem;
-  background: rgba(255 255 255 / 0.4);
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  color: #6a4a2e;
-  text-shadow: none;
+  text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
+  color: #766a77;
 }
 
-#countdown div {
-  min-width: 60px;
-  background: #f0c6a9;
-  border-radius: 15px;
-  padding: 0.3rem 0;
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+.frase2 {
+  color: #776a6a; /* Cambia a cualquier color que prefieras */
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-#countdown span {
-  font-size: 1.8rem;
-  display: block;
-  color: #5a3e1b;
+#regalos {
+  border: 2px solid #e8bfae;  /* borde color rosa fuerte */
+  border-radius: 10px;         /* bordes redondeados */
+  padding: 1.5rem 2rem;        /* espacio interno */
+  max-width: 500px;            /* ancho máximo para que no sea muy ancho */
+  margin: 2rem auto;           /* margen arriba y abajo, centrado horizontalmente */
+  background-color: #fff6f2;  /* fondo muy suave rosa (lavanda claro) */
+  box-shadow: 0 2px 8px rgba(194, 33, 91, 0.2); /* sombra suave */
+  text-align: center;          /* centrar texto */
 }
 
-/* Botón */
-.btn {
-  background-color: #d9843b;
+.btn, .btn-regalo {
+  background: #c2185b;
   color: white;
-  padding: 0.75rem 2.5rem;
-  font-weight: 700;
-  border-radius: 40px;
+  padding: 0.8rem 1.2rem;
+  border: none;
   text-decoration: none;
   display: inline-block;
-  box-shadow: 0 5px 8px rgba(217, 132, 59, 0.5);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
+  border-radius: 5px;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: #a25a33;
-  box-shadow: 0 8px 15px rgba(162, 90, 51, 0.7);
-  outline: none;
-}
-
-/* Sección Frase 1*/
-#Frase1 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  margin-top: 3rem;
-}
-
-#Frase1 h2 {
-  font-size: 2rem;
-  color: #0f0f0f;
-  margin-bottom: 1.5rem;
-}
-
-.Frase1 {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  font-style: italic;
-  color: #0e0d0d;
-  font-size: 1.2rem;
-}
-
-.Frase1 div p {
-  margin-bottom: 0.5rem;
-}
-
-#Frase1 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  margin-top: 3rem;
-}
-
-#Frase1 h2 {
-  font-size: 2rem;
-  color: #131212;
-  margin-bottom: 1.5rem;
-}
-
-.Frase1 {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  font-style: italic;
-  color: #7a5a3a;
-  font-size: 1.2rem;
-}
-
-.Frase1 div p {
-  margin-bottom: 0.5rem;
-}
-
-/* Sección Frase 2*/
-#Frase2 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  margin-top: 3rem;
-}
-
-#Frase2 h2 {
-  font-size: 2rem;
-  color: #a25a33;
-  margin-bottom: 1.5rem;
-}
-
-.Frase2 {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  font-style: italic;
-  color: #7a5a3a;
-  font-size: 1.2rem;
-}
-
-.Frase2 div p {
-  margin-bottom: 0.5rem;
-}
-
-* Sección Nuestros Padres */
-#Frase2 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  margin-top: 3rem;
-}
-
-#Frase2 h2 {
-  font-size: 2rem;
-  color: #a25a33;
-  margin-bottom: 1.5rem;
-}
-
-.Frase2 {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  font-style: italic;
-  color: #7a5a3a;
-  font-size: 1.2rem;
-}
-
-.Frase2 div p {
-  margin-bottom: 0.5rem;
-}
-/* Itinerario */
-#itinerario h2 {
-  font-family: 'Playfair Display', serif;
-  color: #a25a33;
-  margin-bottom: 1rem;
+section {
+  margin: 2rem 0;
   text-align: center;
 }
 
 .evento {
-  background: #fff8f1;
-  border: 1px solid #f0c6a9;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 5px rgba(217, 132, 59, 0.1);
-  text-align: center;
-}
-
-.evento h3 {
-  margin-bottom: 0.3rem;
-  color: #d9843b;
-}
-
-.evento p {
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-}
-
-.evento a.mapa-link {
-  color: #a25a33;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.evento a.mapa-link:hover,
-.evento a.mapa-link:focus {
-  color: #d9843b;
-  outline: none;
-}
-
-/* Dress Code */
-#codigo-vestimenta {
-  background: #fff3e6;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  margin: 3rem 0;
-  text-align: center;
-  font-style: italic;
-  font-weight: 600;
-  color: #7a5a3a;
-}
-
-#codigo-vestimenta h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 0.6rem;
-  color: #a25a33;
-}
-
-/* Galería */
-#galeria {
-  margin-bottom: 3rem;
-}
-
-#galeria h2 {
-  font-family: 'Playfair Display', serif;
-  color: #a25a33;
-  text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .galeria {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .galeria img {
-  max-width: 30%;
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(217, 132, 59, 0.2);
-  transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
-.galeria img:hover {
-  transform: scale(1.05);
+.form-container {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
-/* No Niños */
-#no-ninos {
-  background: #f7d1b7;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  color: #7a5a3a;
-  font-weight: 700;
+.form-container iframe {
+  width: 100%;
+  min-height: 1500px;
+  border: none;
+}
+
+footer {
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 1rem 0;
+  background: #f8dfe6;
+  margin-top: 2rem;
 }
 
-/* Mesa de Regalos */
-#regalos {
-  background: #fff8f1;
-  padding: 2rem 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(217, 132, 59, 0.1);
+/* Contador: estilos fuera del media query para que siempre se apliquen */
+#countdown-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-#regalos h2 {
-  font-family: 'Playfair Display', serif;
+.countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: nowrap; /* Evitar salto de línea */
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff3ec;
+  padding: 1rem;
+  border-radius: 15px;
+  min-width: 80px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.time-box span {
+  font-size: 2.5rem;
+  font-weight: bold;
   color: #a25a33;
-  margin-bottom: 1rem;
 }
 
-#regalos p {
-  margin-bottom: 1rem;
-  font-weight: 600;
+.time-box small {
+  font-size: 0.9rem;
+  color: #5e3b2c;
 }
 
-#regalos a.btn-regalo {
-  background-color: #d9843b;
-  color: white;
-  padding: 0.5rem 2rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 700;
-  display: inline-block;
-  margin-bottom: 1rem;
-  transition: background-color 0.3s ease;
+.separator {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #a25a33;
 }
 
-#regalos a.btn-regalo:hover,
-#regalos a.btn-regalo:focus {
-  background-color: #a25a33;
-  outline: none;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .galeria {
+    flex-direction: column;
+  }
 }
 
-/* Hospedaje */
-#hospedaje {
+#itinerario {
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 2rem 1rem;
 }
 
-#hospedaje h2 {
-  font-family: 'Playfair Display', serif;
+#itinerario h2 {
+  font-size: 2rem;
+  color: #8B4513;
+  margin-bottom: 2rem;
+}
+
+.evento {
+  background-color: #fff6f2;
+  border: 1px solid #e8bfae;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.evento h3 {
+  color: #c75b12;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.evento p {
+  color: #3b2f2f;
+  margin-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+.evento a {
+  color: #c75b12;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
