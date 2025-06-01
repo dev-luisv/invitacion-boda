@@ -307,17 +307,21 @@ nav a {
 /* ================================
    GALERÍA
 ================================ */
+/* ================================
+   GALERÍA
+================================ */
 .galeria {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  flex-wrap: nowrap;       /* No permite que se vayan hacia abajo */
-  padding: 1rem;
+  flex-wrap: nowrap; /* Para que siempre estén en línea horizontal */
+  padding: 0.5rem;
+  overflow-x: auto; /* Por si en móviles se requiere deslizar */
 }
 
 .galeria img {
-  width: 48%;              /* Cada imagen ocupa casi la mitad del ancho */
+  max-width: 10%; /* Más pequeñas */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -328,10 +332,10 @@ nav a {
   transform: scale(1.05);
 }
 
-/* Elimina cualquier media query que les ponga width mayor o que las apile */
+/* Opcionalmente en móviles, aún más pequeñas */
 @media (max-width: 600px) {
   .galeria img {
-    width: 48%;
+    max-width: 10%;
   }
 }
 /* ================================
