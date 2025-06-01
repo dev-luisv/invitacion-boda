@@ -360,12 +360,24 @@ nav a {
 }
 
 /* ================================
+   Faltan
+================================ */
+#faltan {
+  margin-bottom: 0rem; /* reduce espacio debajo del texto */
+  font-size: 1.9rem;      /* tamaño acorde, ajusta si quieres */
+  font-weight: 600;
+  color: #5e3b2c;
+  text-align: center;
+  font-family: 'Humber Town', serif;
+}
+
+/* ================================
    CONTADOR REGRESIVO
 ================================ */
 #countdown-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .countdown {
@@ -413,11 +425,14 @@ nav a {
   #countdown-container {
     overflow-x: auto;
     padding: 0 1rem;
+    width: 100vw; /* Que ocupe todo el ancho del viewport */
+    -webkit-overflow-scrolling: touch; /* para scroll suave en iOS */
   }
 
   .countdown {
     flex-wrap: nowrap;
     min-width: max-content;
+    display: inline-flex; /* para que tome solo el ancho necesario */
   }
 
   .time-box {
