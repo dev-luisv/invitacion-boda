@@ -6,8 +6,8 @@
 }
 
 @font-face {
-  font-family: 'Simple Garden';
-  src: url('fonts/Simple Garden.otf') format('opentype');
+  font-family: 'Fragmentcore';
+  src: url('fonts/Fragmentcore.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -52,19 +52,19 @@
   color: #000000;
   font-weight: 500;
   transition: all 0.3s ease;
-  font-family: 'Simple Garden', serif;
+  font-family: 'Fragmentcore', serif;
 }
 
 .menu-principal a:hover {
-  color: #c2185b;
+  color: #5ec96c;
   text-decoration: underline;
 }
 
 body {
   font-style: italic;
   line-height: 1.6;
-  background: #fff;
-  color: #c2185b;
+  background: #ffffff;
+  color: #65b962;
   padding: 4rem 1rem 3rem;
   border-radius: 8px;
   font-weight: normal;
@@ -86,27 +86,25 @@ nav ul {
 }
 
 nav a {
-  color: #776a6a;
+  color: #ca3838;
   text-decoration: none;
   font-weight: bold;
 }
 
 .hero {
   text-align: center;
-  padding: 6rem 1rem 3rem;
-  background: url('Imagen1.jpeg') no-repeat center center/contain;
-  background-size: 30% 120%;
-  color: #ffffff;
-  font-family: 'Cathalia', sans;
-  font-size: 2.9rem;
-  border-radius: 5px;
-  box-shadow: 0 0 1px rgba(100, 10, 35, 0.2);
-  min-height: 0x; /* o la altura que quieras */
-  max-height: 500px; /* opcional */
+  padding: 6rem 6rem 3rem;
   background-image: url('Imagen1.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain; /* que se muestre toda */
+  color: #ffffff;
+  font-family: 'Cathalia', sans;
+  font-size: 3.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgba(100, 100, 500, 0.2);
+  height: 70vh;  /* ocupa el 70% de la altura visible del navegador */
+  max-height: 700px; /* límite para no hacerlo gigante en pantallas muy altas */
 }
 
 .hero h1 {
@@ -122,17 +120,18 @@ nav a {
 }
 
 .frase1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
-  color: #766a77;
+  color: #f3842a;
   font-family: 'Humber Town', sans-serif;
+  font-weight: ;
 }
 
 .frase2 {
   color: #000000; /* Cambia a cualquier color que prefieras */
   font-style: italic;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 2.9rem;
   text-align: center;
   padding: 1rem;
@@ -152,7 +151,7 @@ nav a {
 }
 
 .btn, .btn-regalo {
-  background: #c2185b;
+  background: #fd5a7d;
   color: white;
   padding: 0.8rem 1.2rem;
   border: none;
@@ -180,8 +179,10 @@ section {
 
 .galeria img {
   max-width: 100%;
+  width: 150px;     /* Tamaño deseado en escritorio */
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .form-container {
@@ -198,7 +199,7 @@ section {
 footer {
   text-align: center;
   padding: 1rem 0;
-  background: #70af70;
+  background: #fd5a7d;
   margin-top: 2rem;
 }
 
@@ -235,7 +236,7 @@ footer {
 .time-box span {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #a25a33;
+  color: #8a8b8a; /* color del contador */
 }
 
 .time-box small {
@@ -246,7 +247,7 @@ footer {
 .separator {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #a25a33;
+  color: #8a8b8a;
 }
 
 /* RESPONSIVE */
@@ -268,12 +269,14 @@ footer {
 #itinerario {
   text-align: center;
   padding: 2rem 1rem;
+  font-family: 'Fragmentcore' , serif;
 }
 
 #itinerario h2 {
   font-size: 2rem;
-  color: #8B4513;
+  color: #f3842a;
   margin-bottom: 2rem;
+  font-family: 'Fragmentcore' , serif;
 }
 
 .evento {
@@ -284,18 +287,21 @@ footer {
   margin: 1rem auto;
   max-width: 500px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  font-family: 'Fragmentcore' , serif;
 }
 
 .evento h3 {
   color: #c75b12;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  font-family: 'Fragmentcore' , serif;
 }
 
 .evento p {
   color: #3b2f2f;
   margin-bottom: 0.7rem;
   font-weight: normal;
+  font-family: 'Fragmentcore' , serif;
 }
 
 .evento a {
@@ -303,4 +309,11 @@ footer {
   font-weight: bold;
   text-decoration: underline;
   font-size: 0.95rem;
+  
+}
+#codigo-vestimenta,
+#galeria,
+#regalos,
+#confirmacion {
+  font-family: 'Fragmentcore' , serif;
 }
