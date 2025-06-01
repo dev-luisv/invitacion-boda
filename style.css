@@ -378,10 +378,14 @@ nav a {
   display: flex;
   justify-content: center;
   margin-top: 0;
+  width: 100vw;               /* Ocupa todo el ancho del viewport */
+  overflow-x: auto;          /* Permite scroll horizontal si es necesario */
+  padding: 0 1rem;           /* Pequeño padding para que no quede pegado al borde */
+  -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
 }
 
 .countdown {
-  display: flex;
+  display: inline-flex;      /* Flex en línea para que ocupe solo lo necesario */
   flex-direction: row;
   align-items: center;
   gap: 1rem;
@@ -390,6 +394,7 @@ nav a {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex-wrap: nowrap;
+  min-width: max-content;   /* Ancho mínimo para evitar corte */
 }
 
 .time-box {
@@ -420,19 +425,14 @@ nav a {
   color: #8a8b8a;
 }
 
-/* Ajuste para móviles */
+/* Ajustes para móviles */
 @media (max-width: 600px) {
   #countdown-container {
-    overflow-x: auto;
-    padding: 0 1rem;
-    width: 100vw; /* Que ocupe todo el ancho del viewport */
-    -webkit-overflow-scrolling: touch; /* para scroll suave en iOS */
+    /* Ya definidos arriba para móvil */
   }
 
   .countdown {
-    flex-wrap: nowrap;
-    min-width: max-content;
-    display: inline-flex; /* para que tome solo el ancho necesario */
+    /* Ya definido arriba */
   }
 
   .time-box {
@@ -448,11 +448,6 @@ nav a {
     font-size: 2rem;
   }
 }
-
-#countdown-container {
-  padding: 0 1rem;
-}
-
 /* ================================
    ITINERARIO Y SECCIONES VARIAS
 ================================ */
