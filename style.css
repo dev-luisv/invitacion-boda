@@ -67,6 +67,7 @@
   transform: scale(0.8);
 }
 
+
 /* ================================
    FUENTES PERSONALIZADAS
 ================================ */
@@ -405,6 +406,35 @@ nav a {
   font-size: 2.5rem;
   font-weight: bold;
   color: #8a8b8a;
+}
+
+/* Ajuste para móviles */
+@media screen and (max-width: 480px) {
+  #countdown-container {
+    overflow-x: auto;
+    padding: 0 1rem;
+  }
+
+  .countdown {
+    gap: 0.5rem;
+    padding: 1rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    min-width: max-content;
+  }
+
+  .time-box {
+    min-width: 60px;
+    padding: 0.75rem;
+  }
+
+  .time-box span {
+    font-size: 2rem;
+  }
+
+  .separator {
+    font-size: 2rem;
+  }
 }
 
 /* ================================
