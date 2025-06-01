@@ -410,35 +410,6 @@ nav a {
 
 /* Ajuste para móviles */
 @media (max-width: 600px) {
-  .countdown {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 1rem;
-  }
-
-  .time-box {
-    min-width: 60px;
-    padding: 0.5rem;
-  }
-
-  .time-box span {
-    font-size: 1.8rem;
-  }
-
-  .time-box small {
-    font-size: 0.75rem;
-  }
-
-  .separator {
-    font-size: 1.8rem;
-    margin: 0 0.3rem;
-  }
-
-  .faltan-texto {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 600px) {
   #countdown-container {
     overflow-x: auto;
     padding: 0 1rem;
