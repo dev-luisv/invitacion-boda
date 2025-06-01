@@ -1,14 +1,34 @@
-* {
+@font-face {
+  font-family: 'Humber Town';
+  src: url('fonts/Humber Town.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Simple Garden';
+  src: url('fonts/Simple Garden.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cathalia';
+  src: url('fonts/Cathalia.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .menu-principal {
-  background-color: #fdf5f5; /* Color muy claro y suave */
+  background-color: #f7faf6; /* Color muy claro y suave */
   padding: 1.5rem 0;
-  border-bottom: 2px solid #d8a1c4;
-  font-family: 'Playfair Display', serif;
+  border-bottom: 2px solid #9dcc82;
+  font-family: 'Simple Garden', sans-serif;
 }
 
 .menu-principal ul {
@@ -19,6 +39,7 @@
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+  font-family: 'Simple Garden', sans-serif;
 }
 
 .menu-principal li {
@@ -27,10 +48,11 @@
 
 .menu-principal a {
   text-decoration: none;
-  font-size: 1.2rem;
-  color: #8B2500;
+  font-size: 1.8rem;
+  color: #000000;
   font-weight: 500;
   transition: all 0.3s ease;
+  font-family: 'Simple Garden', serif;
 }
 
 .menu-principal a:hover {
@@ -49,7 +71,7 @@ body {
 }
 
 header {
-  background: #d8abd4;
+  background: #9dcc82;
   padding: 1rem 0;
   text-align: center;
 }
@@ -71,14 +93,20 @@ nav a {
 
 .hero {
   text-align: center;
-  padding: 4rem 1rem 3rem;
-  background: url('Imagen1.jpeg') no-repeat center center/cover;;
-  color: #776a6a;
-  font-family: 'Playfair Display', serif;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(205, 226, 12, 0.2);
-  min-height: 200px; /* o la altura que quieras */
+  padding: 6rem 1rem 3rem;
+  background: url('Imagen1.jpeg') no-repeat center center/contain;
+  background-size: 30% 120%;
+  color: #ffffff;
+  font-family: 'Cathalia', sans;
+  font-size: 2.9rem;
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgba(100, 10, 35, 0.2);
+  min-height: 0x; /* o la altura que quieras */
   max-height: 500px; /* opcional */
+  background-image: url('Imagen1.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .hero h1 {
@@ -98,16 +126,18 @@ nav a {
   margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
   color: #766a77;
+  font-family: 'Humber Town', sans-serif;
 }
 
 .frase2 {
-  color: #776a6a; /* Cambia a cualquier color que prefieras */
+  color: #000000; /* Cambia a cualquier color que prefieras */
   font-style: italic;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 2.9rem;
   text-align: center;
   padding: 1rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+   font-family: 'Humber Town' , serif;
 }
 
 #regalos {
@@ -168,7 +198,7 @@ section {
 footer {
   text-align: center;
   padding: 1rem 0;
-  background: #f8dfe6;
+  background: #70af70;
   margin-top: 2rem;
 }
 
@@ -195,7 +225,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff3ec;
+  background-color: #fff3ec;  /* color del contador */
   padding: 1rem;
   border-radius: 15px;
   min-width: 80px;
