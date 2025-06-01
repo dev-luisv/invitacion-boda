@@ -1,4 +1,4 @@
-// Fecha objetivo: 18 de marzo de 2026 a las 00:00:00
+// Contador regresivo para la fecha objetivo
 const targetDate = new Date('2025-08-16T00:00:00');
 
 function updateCountdown() {
@@ -28,3 +28,13 @@ function updateCountdown() {
 // Ejecutar inmediatamente y luego cada segundo
 updateCountdown();
 const timer = setInterval(updateCountdown, 1000);
+
+// Toggle menú responsive
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButton = document.querySelector('.menu-toggle');
+  const menuList = document.querySelector('.menu-list');
+
+  toggleButton.addEventListener('click', function () {
+    menuList.classList.toggle('active');
+  });
+});
