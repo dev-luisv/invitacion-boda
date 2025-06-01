@@ -309,32 +309,31 @@ nav a {
 ================================ */
 .galeria {
   display: flex;
-  justify-content: center; /* centra horizontalmente las imágenes */
-  align-items: center;     /* alinea verticalmente si tienen diferentes alturas */
-  gap: 1rem;               /* espacio entre las imágenes */
-  flex-wrap: wrap;         /* permite que se acomoden mejor en móviles */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;       /* No permite que se vayan hacia abajo */
   padding: 1rem;
 }
 
 .galeria img {
-  max-width: 45%;    /* se ajusta para que quepan 2 imágenes lado a lado */
+  width: 48%;              /* Cada imagen ocupa casi la mitad del ancho */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* opcional, mejora visual */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .galeria img:hover {
-  transform: scale(1.05); /* efecto al pasar el mouse */
+  transform: scale(1.05);
 }
 
-/* Para pantallas pequeñas */
+/* Elimina cualquier media query que les ponga width mayor o que las apile */
 @media (max-width: 600px) {
   .galeria img {
-    max-width: 90%;  /* que se apilen en móviles */
+    width: 48%;
   }
 }
-
 /* ================================
    REGALOS
 ================================ */
