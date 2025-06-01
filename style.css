@@ -309,17 +309,30 @@ nav a {
 ================================ */
 .galeria {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: center; /* centra horizontalmente las imágenes */
+  align-items: center;     /* alinea verticalmente si tienen diferentes alturas */
+  gap: 1rem;               /* espacio entre las imágenes */
+  flex-wrap: wrap;         /* permite que se acomoden mejor en móviles */
+  padding: 1rem;
 }
 
 .galeria img {
-  max-width: 100%;
-  width: 150px;
+  max-width: 45%;    /* se ajusta para que quepan 2 imágenes lado a lado */
   height: auto;
   border-radius: 10px;
-  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* opcional, mejora visual */
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05); /* efecto al pasar el mouse */
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+  .galeria img {
+    max-width: 90%;  /* que se apilen en móviles */
+  }
 }
 
 /* ================================
