@@ -14,7 +14,7 @@
 #sobre {
   width: 300px;
   height: 200px;
-  background: #fd5a7d;
+  background: #ff8000;
   border-radius: 15px;
   position: relative;
   box-shadow: 0 8px 15px rgba(0,0,0,0.2);
@@ -27,7 +27,7 @@
 #solapa {
   width: 300px;
   height: 100px;
-  background: #f3842a;
+  background: #86895d;
   position: absolute;
   top: 0;
   left: 0;
@@ -86,6 +86,15 @@
   src: url('fonts/Cathalia.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Halimun';
+  src: url('fonts/Halimun.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Farmhouse';
+  src: url('fonts/Farmhouse.otf') format('opentype');
+}
 /* ================================
    RESETEO GLOBAL Y BODY
 ================================ */
@@ -228,8 +237,8 @@ nav a {
   background-position: center center;
   background-size: contain;
   color: #ffffff;
-  font-family: 'Cathalia', sans;
-  font-size: 3.5rem;
+  font-family: 'Farmhouse', sans-serif;
+  font-size: 2.1rem;
   border-radius: 5px;
   box-shadow: 0 0 1px rgba(100, 100, 500, 0.2);
   height: 70vh;
@@ -254,9 +263,9 @@ nav a {
 .frase1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #f3842a;
-  font-family: 'Humber Town', sans-serif;
-  text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
+  color: #000000;
+  font-family: 'Halimun', sans-serif;
+  text-shadow: 0 2px 4px #86895d;
   text-align: center; 
 }
 
@@ -267,7 +276,7 @@ nav a {
   text-align: center;
   padding: 1rem;
   font-style: italic;
-  font-family: 'Humber Town', serif;
+  font-family: 'Halimun', sans-serif;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   text-align: center; 
 }
@@ -282,7 +291,7 @@ nav a {
   padding: 1.5rem;
   margin: 1rem auto;
   max-width: 500px;
-  box-shadow: 0 2px 4px rgba(81, 199, 97, 0.637);
+  box-shadow: 0 2px 4px #86895d;
   font-family: 'Fragmentcore', serif;
 }
 
@@ -481,7 +490,7 @@ nav a {
 
 #itinerario h2 {
   font-size: 2rem;
-  color: #f3842a;
+  color: #86895d;
   margin-bottom: 2rem;
 }
 
