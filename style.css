@@ -117,13 +117,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-  color: #333;
+  color: #333333;
 }
 
 /* Menú principal */
 .menu-principal {
   position: relative;
-  background-color: #333;
+  background-color: #5fa868;
   padding: 10px;
   text-align: center;
 }
@@ -380,7 +380,7 @@ nav a {
   margin-top: 0;
   width: 100vw;               /* Ocupa todo el ancho del viewport */
   overflow-x: auto;          /* Permite scroll horizontal si es necesario */
-  padding: 0 1rem;           /* Pequeño padding para que no quede pegado al borde */
+  padding: 0 0.5rem;           /* Pequeño padding para que no quede pegado al borde */
   -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
 }
 
