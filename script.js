@@ -46,5 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         menuList.classList.remove('active');
       }
     });
+    document.getElementById('abrir-sobre').addEventListener('click', function() {
+  const sobre = document.getElementById('sobre');
+  const sobreContainer = document.getElementById('sobre-container');
+  const mainContent = document.getElementById('main-content');
+
+  sobre.classList.add('open');
+
+  setTimeout(() => {
+    sobreContainer.style.display = 'none';
+    mainContent.style.display = 'block';
+  }, 1000);
+});
   });
 });

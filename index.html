@@ -8,145 +8,153 @@
 </head>
 <body>
 
-  <!-- Encabezado y menú -->
-<nav class="menu-principal">
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
-<ul class="menu-list">
-  <li><a href="#inicio">Inicio</a></li>
-  <li><a href="#itinerario">Itinerario</a></li>
-  <li><a href="#codigo-vestimenta">Codigo de vestimenta</a></li>
-  <li><a href="#regalos">Regalos</a></li>
-  <li><a href="#confirmacion">Confirmación</a></li>
-</ul></nav>
-
-  <!-- Frase inicial -->
-  <section id="frase1" class="frase-seccion">
-    <h2 class="frase1">El amor es solo una palabra, hasta que llega alguien y le da sentido.</h2>
-  </section>
-
-  <!-- Hero principal -->
-  <main>
-    <section class="hero" id="inicio">
-      <h1 class="titulo-principal">Miriam & Luis</h1>
-      <p class="subtitulo-principal">¡Nos casamos!</p>
-      <p class="fecha-principal">16 de agosto de 2025</p>
-    </section>
-
-    <!-- Cuenta regresiva -->
-    <section id="countdown-container">
-      <div class="countdown">
-        <div class="time-box">
-          <span id="days">92</span>
-          <small>Día(s)</small>
-        </div>
-        <div class="separator">:</div>
-        <div class="time-box">
-          <span id="hours">22</span>
-          <small>Hora(s)</small>
-        </div>
-        <div class="separator">:</div>
-        <div class="time-box">
-          <span id="minutes">20</span>
-          <small>Minuto(s)</small>
-        </div>
-        <div class="separator">:</div>
-        <div class="time-box">
-          <span id="seconds">12</span>
-          <small>Segundo(s)</small>
-        </div>
-      </div>
-    </section>
-
-    <!-- Frase intermedia -->
-    <section id="frase2" class="frase-seccion">
-      <h2 class="frase2">
-        Hay momentos en la vida que son muy especiales por sí solos, pero al compartirlos con personas tan especiales como tú, se convierten en momentos imposibles de olvidar.
-      </h2>
-    </section>
-
-    <!-- Itinerario -->
-    <section id="itinerario">
-      <h2 class="seccion-titulo">ITINERARIO</h2>
-      <div class="evento">
-        <h3 class="evento-titulo">CEREMONIA CIVIL</h3>
-        <p class="evento-descripcion">Quinta Los Arcos - 5:00 PM</p>
-      </div>
-      <div class="evento">
-        <h3 class="evento-titulo">RECEPCIÓN</h3>
-        <p class="evento-descripcion">Quinta Los Arcos - 6:00 PM</p>
-      </div>
-      <div class="evento">
-        <h3 class="evento-titulo">CENA</h3>
-        <p class="evento-descripcion">Quinta Los Arcos - 8:00 PM</p>
-      </div>
-      <div class="evento">
-        <h3 class="evento-titulo">¡FIESTA!</h3>
-        <p class="evento-descripcion">Quinta Los Arcos - 10:00 PM</p>
-      </div>
-    </section>
-
-    <!-- Código de vestimenta -->
-    <section id="codigo-vestimenta">
-      <h2 class="seccion-titulo">Código de vestimenta</h2>
-      <p class="texto-normal"><strong>Semiformal / Cocktail</strong></p>
-    </section>
-
-    <!-- Galería de imágenes -->
-    <section id="galeria">
-      <h2 class="seccion-titulo">Galería</h2>
-      <div class="galeria">
-        <img src="img1.jpeg" alt="Foto de Miriam y Luis 1" />
-        <img src="img2.jpeg" alt="Foto de Miriam y Luis 2" />
-      </div>
-    </section>
-
-    <!-- Mesa de regalos -->
-    <section id="regalos">
-      <h2 class="seccion-titulo">MESA DE REGALOS</h2>
-      <p class="texto-normal">¡El regalo es opcional, la asistencia obligatoria!</p>
-      <p class="texto-normal">Pero si quieres tener un detalle con nosotros, ¡suma kilómetros a nuestro viaje!</p>
-      <p class="texto-negrita">
-        <strong>BANORTE</strong><br>
-        Tarjeta: 4189 1432 3184 7420<br>
-        Miriam Uribe Méndez
-      </p>
-    </section>
-
-    <!-- Ubicacion -->
-    <section id="ubicacion">
-  <h2 class="seccion-titulo">Ubicación</h2>
-  <div class="mapa-container">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.513776146562!2d-100.35991539999999!3d20.6893514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d359654527ed35%3A0xe89cc0b0ba592b6!2sQuinta%20Los%20Arcos!5e0!3m2!1ses-419!2smx!4v1748812297035!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="
-      width="100%" 
-      height="400" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+  <!-- Sobre antes de mostrar el contenido -->
+  <div id="sobre-container">
+    <div id="sobre">
+      <div id="solapa"></div>
+      <div id="cuerpo-sobre"></div>
+      <button id="abrir-sobre">Abrir Invitación</button>
+    </div>
   </div>
-</section>
 
-    <!-- Confirmación -->
-    <section id="confirmacion">
-      <h2 class="seccion-titulo">CONFIRMAR ASISTENCIA</h2>
-      <p class="texto-normal">Confirma tu asistencia antes del día <strong>30 de junio</strong>.</p>
-      <a href="#confirmacion" class="btn">CONFIRMA TU ASISTENCIA</a>
-      <div class="form-container">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfnuAgupSK6_os_9TuqwBn6ksDq9N2K-reDQUhfm_Hx1U8mkg/viewform?embedded=true"
-          width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
-          Cargando…
-        </iframe>
-      </div>
+  <!-- Contenido principal oculto al cargar -->
+  <div id="main-content" style="display:none;">
+    <!-- Encabezado y menú -->
+    <nav class="menu-principal">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="menu-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#itinerario">Itinerario</a></li>
+        <li><a href="#codigo-vestimenta">Codigo de vestimenta</a></li>
+        <li><a href="#regalos">Regalos</a></li>
+        <li><a href="#confirmacion">Confirmación</a></li>
+      </ul>
+    </nav>
+
+    <!-- Frase inicial -->
+    <section id="frase1" class="frase-seccion">
+      <h2 class="frase1">El amor es solo una palabra, hasta que llega alguien y le da sentido.</h2>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Miriam & Luis</p>
-  </footer>
+    <!-- Hero principal -->
+    <main>
+      <section class="hero" id="inicio">
+        <h1 class="titulo-principal">Miriam & Luis</h1>
+        <p class="subtitulo-principal">¡Nos casamos!</p>
+        <p class="fecha-principal">16 de agosto de 2025</p>
+      </section>
+
+      <!-- Cuenta regresiva -->
+      <section id="countdown-container">
+        <div class="countdown">
+          <div class="time-box">
+            <span id="days">92</span>
+            <small>Día(s)</small>
+          </div>
+          <div class="separator">:</div>
+          <div class="time-box">
+            <span id="hours">22</span>
+            <small>Hora(s)</small>
+          </div>
+          <div class="separator">:</div>
+          <div class="time-box">
+            <span id="minutes">20</span>
+            <small>Minuto(s)</small>
+          </div>
+          <div class="separator">:</div>
+          <div class="time-box">
+            <span id="seconds">12</span>
+            <small>Segundo(s)</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frase intermedia -->
+      <section id="frase2" class="frase-seccion">
+        <h2 class="frase2">
+          Hay momentos en la vida que son muy especiales por sí solos, pero al compartirlos con personas tan especiales como tú, se convierten en momentos imposibles de olvidar.
+        </h2>
+      </section>
+
+      <!-- Itinerario -->
+      <section id="itinerario">
+        <h2 class="seccion-titulo">ITINERARIO</h2>
+        <div class="evento">
+          <h3 class="evento-titulo">CEREMONIA CIVIL</h3>
+          <p class="evento-descripcion">Quinta Los Arcos - 5:00 PM</p>
+        </div>
+        <div class="evento">
+          <h3 class="evento-titulo">RECEPCIÓN</h3>
+          <p class="evento-descripcion">Quinta Los Arcos - 6:00 PM</p>
+        </div>
+        <div class="evento">
+          <h3 class="evento-titulo">CENA</h3>
+          <p class="evento-descripcion">Quinta Los Arcos - 8:00 PM</p>
+        </div>
+        <div class="evento">
+          <h3 class="evento-titulo">¡FIESTA!</h3>
+          <p class="evento-descripcion">Quinta Los Arcos - 10:00 PM</p>
+        </div>
+      </section>
+
+      <!-- Código de vestimenta -->
+      <section id="codigo-vestimenta">
+        <h2 class="seccion-titulo">Código de vestimenta</h2>
+        <p class="texto-normal"><strong>Semiformal / Cocktail</strong></p>
+      </section>
+
+      <!-- Galería de imágenes -->
+      <section id="galeria">
+        <h2 class="seccion-titulo">Galería</h2>
+        <div class="galeria">
+          <img src="img1.jpeg" alt="Foto de Miriam y Luis 1" />
+          <img src="img2.jpeg" alt="Foto de Miriam y Luis 2" />
+        </div>
+      </section>
+
+      <!-- Mesa de regalos -->
+      <section id="regalos">
+        <h2 class="seccion-titulo">MESA DE REGALOS</h2>
+        <p class="texto-normal">¡El regalo es opcional, la asistencia obligatoria!</p>
+        <p class="texto-normal">Pero si quieres tener un detalle con nosotros, ¡suma kilómetros a nuestro viaje!</p>
+        <p class="texto-negrita">
+          <strong>BANORTE</strong><br>
+          Tarjeta: 4189 1432 3184 7420<br>
+          Miriam Uribe Méndez
+        </p>
+      </section>
+
+      <!-- Ubicacion -->
+      <section id="ubicacion">
+        <h2 class="seccion-titulo">Ubicación</h2>
+        <div class="mapa-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.513776146562!2d-100.35991539999999!3d20.6893514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d359654527ed35%3A0xe89cc0b0ba592b6!2sQuinta%20Los%20Arcos!5e0!3m2!1ses-419!2smx!4v1748812297035!5m2!1ses-419!2smx" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </section>
+
+      <!-- Confirmación -->
+      <section id="confirmacion">
+        <h2 class="seccion-titulo">CONFIRMAR ASISTENCIA</h2>
+        <p class="texto-normal">Confirma tu asistencia antes del día <strong>30 de junio</strong>.</p>
+        <a href="#confirmacion" class="btn">CONFIRMA TU ASISTENCIA</a>
+        <div class="form-container">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfnuAgupSK6_os_9TuqwBn6ksDq9N2K-reDQUhfm_Hx1U8mkg/viewform?embedded=true"
+            width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
+            Cargando…
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Miriam & Luis</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>

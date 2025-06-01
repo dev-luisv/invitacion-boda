@@ -1,4 +1,73 @@
 /* ================================
+   Sobre
+================================ */
+#sobre-container {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#sobre {
+  width: 300px;
+  height: 200px;
+  background: #fd5a7d;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 1s ease;
+  transform-origin: top center;
+}
+
+#solapa {
+  width: 300px;
+  height: 100px;
+  background: #f3842a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px 15px 0 0;
+  transform-origin: bottom center;
+  transition: transform 1s ease;
+}
+
+#cuerpo-sobre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 300px;
+  background: #fd5a7d;
+  border-radius: 0 0 15px 15px;
+}
+
+#abrir-sobre {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#sobre.open #solapa {
+  transform: rotateX(-180deg);
+}
+
+#sobre.open {
+  transform: scale(0.8);
+}
+
+/* ================================
    FUENTES PERSONALIZADAS
 ================================ */
 @font-face {
