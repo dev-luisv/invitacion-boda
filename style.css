@@ -41,72 +41,85 @@ html, body {
    MENU PRINCIPAL
 ================================ */
 
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
 /* Menú principal */
 .menu-principal {
   position: relative;
-  background-color: transparent; /* sin cambiar colores */
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
 }
 
-/* Botón hamburguesa */
-.menu-toggle {
-  font-size: 24px;
+.menu-principal .menu-toggle {
+  display: none;
   background: none;
   border: none;
+  color: #fff;
+  font-size: 30px;
   cursor: pointer;
-  display: none; /* Oculto en desktop */
 }
 
-/* Lista del menú */
-.menu-list {
+.menu-principal .menu-list {
   list-style: none;
-  margin: 0;
   padding: 0;
-  display: flex; /* horizontal en desktop */
-  gap: 25px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* Estilos para los links */
-.menu-list li a {
+.menu-principal .menu-list li {
+  margin: 0 15px;
+}
+
+.menu-principal .menu-list li a {
+  color: #fff;
   text-decoration: none;
-  color: inherit;
-  font-weight: 600;
-  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
 }
 
-/* --- Responsive --- */
+.menu-principal .menu-list li a:hover {
+  color: #f1c40f;
+}
+
+/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
-  /* Mostrar botón hamburguesa */
-  .menu-toggle {
+  .menu-principal .menu-toggle {
     display: block;
   }
 
-  /* Menú oculto por defecto en móvil */
-  .menu-list {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white; /* fondo para menú desplegable */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    flex-direction: column;
-    width: 200px;
+  .menu-principal .menu-list {
     display: none;
-    border-radius: 0 0 8px 8px;
-    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    z-index: 10;
   }
 
-  /* Mostrar menú cuando está activo */
-  .menu-list.active {
+  .menu-principal .menu-list.active {
     display: flex;
   }
 
-  /* Links en columna */
-  .menu-list li {
+  .menu-principal .menu-list li {
     margin: 10px 0;
-    padding: 10px 20px;
+  }
+
+  .menu-principal .menu-list li a {
+    font-size: 18px;
   }
 }
 
@@ -354,6 +367,18 @@ footer {
   margin-top: 2rem;
 }
 
+/* ================================
+Ubicacion
+================================ */
+
+.mapa-container {
+  text-align: center;
+  margin: 20px 0; /* opcional, para separar verticalmente */
+}
+
+.seccion-titulo {
+  text-align: center;
+}
 /* ================================
    RESPONSIVE GENERAL
 ================================ */
