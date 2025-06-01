@@ -327,7 +327,9 @@ footer {
   }
 
   .menu-principal ul {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
   }
 
@@ -370,6 +372,30 @@ footer {
   }
 
   .countdown {
-    flex-direction: column;
-    gap
-::contentReference[oaicite:1]{index=1}
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .time-box {
+    min-width: 60px;
+    padding: 0.8rem;
+  }
+
+  .time-box span {
+    font-size:
+::contentReference[oaicite:8]{index=8}
+
+  .time-box span {
+    font-size: 2rem;
+  }
+
+  .separator {
+    display: none;
+  }
+}
+
+/* ================================
+   FIN DEL CSS
+================================ */
