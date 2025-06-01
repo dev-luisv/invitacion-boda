@@ -29,12 +29,22 @@ function updateCountdown() {
 updateCountdown();
 const timer = setInterval(updateCountdown, 1000);
 
-// Toggle menú responsive
-document.addEventListener('DOMContentLoaded', function () {
+// Funcionalidad para menú responsive
+document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.menu-toggle');
   const menuList = document.querySelector('.menu-list');
 
-  toggleButton.addEventListener('click', function () {
+  toggleButton.addEventListener('click', () => {
     menuList.classList.toggle('active');
+  });
+
+  // Cerrar menú al hacer clic en un enlace
+  const links = document.querySelectorAll('.menu-list a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      if (menuList.classList.contains('active')) {
+        menuList.classList.remove('active');
+      }
+    });
   });
 });

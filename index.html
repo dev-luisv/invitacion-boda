@@ -10,14 +10,14 @@
 
   <!-- Encabezado y menú -->
 <nav class="menu-principal">
-  <ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#itinerario">Itinerario</a></li>
-    <li><a href="#codigo-vestimenta">Codigo de vestimenta</a></li>
-    <li><a href="#regalos">Regalos</a></li>
-    <li><a href="#confirmacion">Confirmación</a></li>
-  </ul>
-</nav>
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<ul class="menu-list">
+  <li><a href="#inicio">Inicio</a></li>
+  <li><a href="#itinerario">Itinerario</a></li>
+  <li><a href="#codigo-vestimenta">Codigo de vestimenta</a></li>
+  <li><a href="#regalos">Regalos</a></li>
+  <li><a href="#confirmacion">Confirmación</a></li>
+</ul></nav>
 
   <!-- Frase inicial -->
   <section id="frase1" class="frase-seccion">
@@ -111,6 +111,22 @@
         Miriam Uribe Méndez
       </p>
     </section>
+
+    <!-- Ubicacion -->
+    <section id="ubicacion">
+  <h2 class="seccion-titulo">Ubicación</h2>
+  <div class="mapa-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.513776146562!2d-100.35991539999999!3d20.6893514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d359654527ed35%3A0xe89cc0b0ba592b6!2sQuinta%20Los%20Arcos!5e0!3m2!1ses-419!2smx!4v1748812297035!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="
+      width="100%" 
+      height="400" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
 
     <!-- Confirmación -->
     <section id="confirmacion">
