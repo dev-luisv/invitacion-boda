@@ -280,7 +280,7 @@ nav a {
   padding: 1.5rem;
   margin: 1rem auto;
   max-width: 500px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(81, 199, 97, 0.637);
   font-family: 'Fragmentcore', serif;
 }
 
@@ -291,7 +291,7 @@ nav a {
 }
 
 .evento p {
-  color: #3b2f2f;
+  color: #49b180a2;
   margin-bottom: 0.7rem;
 }
 
@@ -365,7 +365,7 @@ nav a {
 #countdown-container {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .countdown {
@@ -375,7 +375,7 @@ nav a {
   gap: 1rem;
   background: rgba(255, 255, 255, 0.2);
   padding: 1rem 2rem;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex-wrap: nowrap;
 }
@@ -409,31 +409,33 @@ nav a {
 }
 
 /* Ajuste para móviles */
-@media screen and (max-width: 480px) {
-  #countdown-container {
-    overflow-x: auto;
-    padding: 0 1rem;
-  }
-
+@media (max-width: 600px) {
   .countdown {
+    flex-wrap: wrap;
     gap: 0.5rem;
     padding: 1rem;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    min-width: max-content;
   }
 
   .time-box {
     min-width: 60px;
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .time-box span {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .time-box small {
+    font-size: 0.75rem;
   }
 
   .separator {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin: 0 0.3rem;
+  }
+
+  .faltan-texto {
+    font-size: 1.2rem;
   }
 }
 
