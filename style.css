@@ -371,33 +371,5 @@ footer {
 
   .countdown {
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .time-box {
-    min-width: 60px;
-    padding: 0.8rem;
-  }
-
-  .time-box span {
-    font-size: 1.8rem;
-  }
-
-  .time-box small {
-    font-size: 0.8rem;
-  }
-
-  .evento {
-    margin: 1rem;
-    padding: 1rem;
-  }
-
-  #regalos {
-    width: 90%;
-  }
-
-  section {
-    margin: 1rem 0;
-  }
-}
+    gap
+::contentReference[oaicite:1]{index=1}
