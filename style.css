@@ -449,6 +449,10 @@ nav a {
   }
 }
 
+#countdown-container {
+  padding: 0 1rem;
+}
+
 /* ================================
    ITINERARIO Y SECCIONES VARIAS
 ================================ */
