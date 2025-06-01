@@ -1,5 +1,3 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 /* ================================
    FUENTES PERSONALIZADAS
 ================================ */
@@ -58,7 +56,9 @@ html, body {
   padding: 0;
 }
 
-.menu-principal li { margin: 0; }
+.menu-principal li {
+  margin: 0;
+}
 
 .menu-principal a {
   text-decoration: none;
