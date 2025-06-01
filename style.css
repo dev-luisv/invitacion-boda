@@ -1,37 +1,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-right: 1rem;
-}
-
-@media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu-list {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #f7faf6;
-    padding: 1rem 0;
-  }
-
-  .menu-list.active {
-    display: flex;
-  }
-}
-
-
+/* ================================
+   FUENTES PERSONALIZADAS
+================================ */
 @font-face {
   font-family: 'Humber Town';
   src: url('fonts/Humber Town.otf') format('opentype');
@@ -47,6 +18,9 @@
   src: url('fonts/Cathalia.otf') format('opentype');
 }
 
+/* ================================
+   RESETEO GLOBAL Y BODY
+================================ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -65,7 +39,9 @@ html, body {
   font-weight: normal;
 }
 
-/* MENU */
+/* ================================
+   MENU PRINCIPAL
+================================ */
 .menu-principal {
   background-color: #f7faf6;
   padding: 1.5rem 0;
@@ -98,7 +74,42 @@ html, body {
   text-decoration: underline;
 }
 
-/* HEADER */
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+/* Responsive menú hamburguesa */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f7faf6;
+    padding: 1rem 0;
+  }
+
+  .menu-list.active {
+    display: flex;
+  }
+}
+
+/* ================================
+   HEADER
+================================ */
 header {
   background: #9dcc82;
   padding: 1rem 0;
@@ -120,7 +131,9 @@ nav a {
   font-weight: bold;
 }
 
-/* HERO */
+/* ================================
+   HERO
+================================ */
 .hero {
   text-align: center;
   padding: 6rem 6rem 3rem;
@@ -149,7 +162,9 @@ nav a {
   text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
 }
 
-/* FRASES */
+/* ================================
+   FRASES DESTACADAS
+================================ */
 .frase1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -169,12 +184,9 @@ nav a {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* SECCIONES */
-section {
-  margin: 2rem 0;
-  text-align: center;
-}
-
+/* ================================
+   EVENTOS
+================================ */
 .evento {
   background-color: #fff6f2;
   border: 1px solid #e8bfae;
@@ -204,7 +216,9 @@ section {
   font-size: 0.95rem;
 }
 
-/* GALERIA */
+/* ================================
+   GALERÍA
+================================ */
 .galeria {
   display: flex;
   flex-wrap: wrap;
@@ -220,7 +234,9 @@ section {
   object-fit: cover;
 }
 
-/* REGALOS */
+/* ================================
+   REGALOS
+================================ */
 #regalos {
   border: 2px solid #e8bfae;
   border-radius: 10px;
@@ -243,7 +259,9 @@ section {
   border-radius: 5px;
 }
 
-/* FORMULARIO */
+/* ================================
+   FORMULARIO DE CONFIRMACIÓN
+================================ */
 .form-container {
   max-width: 100%;
   overflow-x: auto;
@@ -255,7 +273,9 @@ section {
   border: none;
 }
 
-/* CONTADOR */
+/* ================================
+   CONTADOR REGRESIVO
+================================ */
 #countdown-container {
   display: flex;
   justify-content: center;
@@ -302,8 +322,14 @@ section {
   color: #8a8b8a;
 }
 
-/* ITINERARIO */
-#itinerario {
+/* ================================
+   ITINERARIO Y SECCIONES VARIAS
+================================ */
+#itinerario,
+#codigo-vestimenta,
+#galeria,
+#regalos,
+#confirmacion {
   text-align: center;
   padding: 2rem 1rem;
   font-family: 'Fragmentcore', serif;
@@ -315,15 +341,9 @@ section {
   margin-bottom: 2rem;
 }
 
-/* OTRAS SECCIONES */
-#codigo-vestimenta,
-#galeria,
-#regalos,
-#confirmacion {
-  font-family: 'Fragmentcore', serif;
-}
-
-/* FOOTER */
+/* ================================
+   FOOTER
+================================ */
 footer {
   text-align: center;
   padding: 1rem 0;
@@ -331,7 +351,9 @@ footer {
   margin-top: 2rem;
 }
 
-/* RESPONSIVE */
+/* ================================
+   RESPONSIVE GENERAL
+================================ */
 @media screen and (max-width: 768px) {
   body {
     padding: 2rem 1rem;
