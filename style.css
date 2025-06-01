@@ -113,7 +113,7 @@ html, body {
 
 /* Estilos generales */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Fragmentcore', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -123,7 +123,7 @@ body {
 /* Menú principal */
 .menu-principal {
   position: relative;
-  background-color: #5fa868;
+  background-color: #86895d;
   padding: 10px;
   text-align: center;
 }
