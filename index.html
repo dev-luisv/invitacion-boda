@@ -7,122 +7,129 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="menu-principal">
-      <ul>
-        <li><a href="#inicio">INICIO</a></li>
-        <li><a href="#confirmacion">CONFIRMA TU ASISTENCIA</a></li>
-        <li><a href="#regalos">MESA DE REGALOS</a></li>
-        <li><a href="#itinerario">ITINERARIO</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Frase 1 -->
-  <section id="frase1">
+  <!-- Encabezado y menú -->
+  <header>
+  <nav class="menu-principal" id="menu">
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <ul class="menu-list" id="menu-list">
+      <li><a href="#inicio">INICIO</a></li>
+      <li><a href="#confirmacion">CONFIRMA TU ASISTENCIA</a></li>
+      <li><a href="#regalos">MESA DE REGALOS</a></li>
+      <li><a href="#itinerario">ITINERARIO</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Frase inicial -->
+  <section id="frase1" class="frase-seccion">
     <h2 class="frase1">El amor es solo una palabra, hasta que llega alguien y le da sentido.</h2>
   </section>
 
   <!-- Hero principal -->
-  <section class="hero" id="inicio">
-    <h1 class="titulo-principal">Miriam & Luis</h1>
-    <p class="subtitulo-principal">¡Nos casamos!</p>
-    <p class="fecha-principal">16 de agosto de 2025</p>
-  </section>
+  <main>
+    <section class="hero" id="inicio">
+      <h1 class="titulo-principal">Miriam & Luis</h1>
+      <p class="subtitulo-principal">¡Nos casamos!</p>
+      <p class="fecha-principal">16 de agosto de 2025</p>
+    </section>
 
-  <!-- Countdown -->
-  <section id="countdown-container">
-    <div class="countdown">
-      <div class="time-box">
-        <span id="days">92</span>
-        <small>Día(s)</small>
+    <!-- Cuenta regresiva -->
+    <section id="countdown-container">
+      <div class="countdown">
+        <div class="time-box">
+          <span id="days">92</span>
+          <small>Día(s)</small>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-box">
+          <span id="hours">22</span>
+          <small>Hora(s)</small>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-box">
+          <span id="minutes">20</span>
+          <small>Minuto(s)</small>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-box">
+          <span id="seconds">12</span>
+          <small>Segundo(s)</small>
+        </div>
       </div>
-      <div class="separator">:</div>
-      <div class="time-box">
-        <span id="hours">22</span>
-        <small>Hora(s)</small>
+    </section>
+
+    <!-- Frase intermedia -->
+    <section id="frase2" class="frase-seccion">
+      <h2 class="frase2">
+        Hay momentos en la vida que son muy especiales por sí solos, pero al compartirlos con personas tan especiales como tú, se convierten en momentos imposibles de olvidar.
+      </h2>
+    </section>
+
+    <!-- Itinerario -->
+    <section id="itinerario">
+      <h2 class="seccion-titulo">ITINERARIO</h2>
+      <div class="evento">
+        <h3 class="evento-titulo">CEREMONIA CIVIL</h3>
+        <p class="evento-descripcion">Quinta Los Arcos - 5:00 PM</p>
       </div>
-      <div class="separator">:</div>
-      <div class="time-box">
-        <span id="minutes">20</span>
-        <small>Minuto(s)</small>
+      <div class="evento">
+        <h3 class="evento-titulo">RECEPCIÓN</h3>
+        <p class="evento-descripcion">Quinta Los Arcos - 6:00 PM</p>
       </div>
-      <div class="separator">:</div>
-      <div class="time-box">
-        <span id="seconds">12</span>
-        <small>Segundo(s)</small>
+      <div class="evento">
+        <h3 class="evento-titulo">CENA</h3>
+        <p class="evento-descripcion">Quinta Los Arcos - 8:00 PM</p>
       </div>
-    </div>
-  </section>
+      <div class="evento">
+        <h3 class="evento-titulo">¡FIESTA!</h3>
+        <p class="evento-descripcion">Quinta Los Arcos - 10:00 PM</p>
+      </div>
+    </section>
 
-  <!-- Frase 2 -->
-  <section id="frase2">
-    <h2 class="frase2">
-      Hay momentos en la vida que son muy especiales por sí solos, pero al compartirlo con personas tan especiales como tú se convierten en momentos imposibles de olvidar.
-    </h2>
-  </section>
+    <!-- Código de vestimenta -->
+    <section id="codigo-vestimenta">
+      <h2 class="seccion-titulo">Código de vestimenta</h2>
+      <p class="texto-normal"><strong>Semiformal / Cocktail</strong></p>
+    </section>
 
-  <!-- Itinerario -->
-  <section id="itinerario">
-    <h2 class="seccion-titulo">ITINERARIO</h2>
-    <div class="evento">
-      <h3 class="evento-titulo">CEREMONIA CIVIL</h3>
-      <p class="evento-descripcion">Quinta Los Arcos - 5:00 PM</p>
-    </div>
-    <div class="evento">
-      <h3 class="evento-titulo">RECEPCIÓN</h3>
-      <p class="evento-descripcion">Quinta Los Arcos - 6:00 PM</p>
-    </div>
-    <div class="evento">
-      <h3 class="evento-titulo">CENA</h3>
-      <p class="evento-descripcion">Quinta Los Arcos - 8:00 PM</p>
-    </div>
-    <div class="evento">
-      <h3 class="evento-titulo">¡FIESTA!</h3>
-      <p class="evento-descripcion">Quinta Los Arcos - 10:00 PM</p>
-    </div>
-  </section>
+    <!-- Galería de imágenes -->
+    <section id="galeria">
+      <h2 class="seccion-titulo">Galería</h2>
+      <div class="galeria">
+        <img src="img1.jpeg" alt="Foto de Miriam y Luis 1" />
+        <img src="img2.jpeg" alt="Foto de Miriam y Luis 2" />
+      </div>
+    </section>
 
-  <!-- Código de vestimenta -->
-  <section id="codigo-vestimenta">
-    <h2 class="seccion-titulo">Código de vestimenta</h2>
-    <p class="texto-normal"><strong>Semiformal / Cocktail</strong></p>
-  </section>
+    <!-- Mesa de regalos -->
+    <section id="regalos">
+      <h2 class="seccion-titulo">MESA DE REGALOS</h2>
+      <p class="texto-normal">¡El regalo es opcional, la asistencia obligatoria!</p>
+      <p class="texto-normal">Pero si quieres tener un detalle con nosotros, ¡suma kilómetros a nuestro viaje!</p>
+      <p class="texto-negrita">
+        <strong>BANORTE</strong><br>
+        Tarjeta: 4189 1432 3184 7420<br>
+        Miriam Uribe Méndez
+      </p>
+    </section>
 
-  <!-- Galería -->
-  <section id="galeria">
-    <div class="galeria">
-      <img src="img1.jpeg" alt="Foto 1" />
-      <img src="img2.jpeg" alt="Foto 2" />
-    </div>
-  </section>
+    <!-- Confirmación -->
+    <section id="confirmacion">
+      <h2 class="seccion-titulo">CONFIRMAR ASISTENCIA</h2>
+      <p class="texto-normal">Confirma tu asistencia antes del día <strong>30 de junio</strong>.</p>
+      <a href="#confirmacion" class="btn">CONFIRMA TU ASISTENCIA</a>
+      <div class="form-container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfnuAgupSK6_os_9TuqwBn6ksDq9N2K-reDQUhfm_Hx1U8mkg/viewform?embedded=true"
+          width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
+          Cargando…
+        </iframe>
+      </div>
+    </section>
+  </main>
 
-  <!-- Mesa de regalos -->
-  <section id="regalos">
-    <h2 class="seccion-titulo">MESA DE REGALOS</h2>
-    <p class="texto-normal">¡El regalo es opcional, la asistencia obligatoria!</p>
-    <p class="texto-normal">Pero si quieres tener un detalle con nosotros, ¡suma kilómetros a nuestro viaje!</p>
-    <p class="texto-negrita">
-      <strong>BANORTE</strong><br>
-      Tarjeta: 4189 1432 3184 7420<br>
-      Miriam Uribe Mendez
-    </p>
-  </section>
-
-  <!-- Confirmación -->
-  <section id="confirmacion">
-    <h2 class="seccion-titulo">CONFIRMAR ASISTENCIA</h2>
-    <p class="texto-normal">Confirma tu asistencia antes del día 31 de Junio</p>
-    <a href="#confirmacion" class="btn">CONFIRMA TU ASISTENCIA</a>
-
-    <div class="form-container">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfnuAgupSK6_os_9TuqwBn6ksDq9N2K-reDQUhfm_Hx1U8mkg/viewform?embedded=true"
-        frameborder="0" marginheight="0" marginwidth="0">Cargando…
-      </iframe>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Miriam & Luis</p>
   </footer>

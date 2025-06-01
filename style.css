@@ -1,5 +1,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+/* Estilos base */
+.menu-principal {
+  background-color: #f7faf6;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid #9dcc82;
+  font-family: 'Simple Garden', sans-serif;
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin: 0;
+}
+
+.menu-list a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 500;
+  font-family: 'Fragmentcore', serif;
+  transition: all 0.3s ease;
+}
+
+.menu-list a:hover {
+  color: #5ec96c;
+  text-decoration: underline;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7faf6;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #9dcc82;
+  }
+
+  .menu-list.show {
+    display: flex;
+  }
+}
+
 @font-face {
   font-family: 'Humber Town';
   src: url('fonts/Humber Town.otf') format('opentype');
