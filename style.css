@@ -1,401 +1,286 @@
-/* ================================
-   FUENTES PERSONALIZADAS
-================================ */
-@font-face {
-  font-family: 'Humber Town';
-  src: url('fonts/Humber Town.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Fragmentcore';
-  src: url('fonts/Fragmentcore.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Cathalia';
-  src: url('fonts/Cathalia.otf') format('opentype');
-}
-
-/* ================================
-   RESETEO GLOBAL Y BODY
-================================ */
+/* Reset básico */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-  font-style: italic;
+/* Tipografía general */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa;
+  color: #333;
   line-height: 1.6;
-  background: #ffffff;
-  color: #65b962;
-  padding: 4rem 1rem 3rem;
-  border-radius: 8px;
-  font-weight: normal;
 }
 
-/* ================================
-   MENU PRINCIPAL
-================================ */
+/* MENU PRINCIPAL */
 .menu-principal {
-  background-color: #f7faf6;
-  padding: 1.5rem 0;
-  border-bottom: 2px solid #9dcc82;
-  font-family: 'Simple Garden', sans-serif;
-}
-
-.menu-principal ul {
-  list-style: none;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px 20px;
   display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  padding: 0;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1000;
 }
 
-.menu-principal li {
-  margin: 0;
+/* Lista de enlaces - por defecto oculta en móvil */
+.menu-list {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  z-index: 1000;
 }
 
-.menu-principal a {
+/* Muestra el menú cuando tiene clase active */
+.menu-list.active {
+  display: flex;
+}
+
+/* Estilo de cada enlace */
+.menu-list li {
+  list-style: none;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-list li:last-child {
+  border-bottom: none;
+}
+
+.menu-list li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
   text-decoration: none;
-  font-size: 1.8rem;
-  color: #000;
-  font-weight: 500;
-  font-family: 'Fragmentcore', serif;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
-.menu-principal a:hover {
-  color: #5ec96c;
-  text-decoration: underline;
+.menu-list li a:hover {
+  background-color: #f0f0f0;
 }
 
-/* ================================
-   HEADER
-================================ */
-header {
-  background: #9dcc82;
-  padding: 1rem 0;
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1100;
+}
+
+/* MEDIA QUERIES */
+
+/* Móvil: muestra botón hamburguesa y oculta menú por defecto */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .menu-list {
+    display: none;
+  }
+  .menu-list.active {
+    display: flex;
+  }
+}
+
+/* Escritorio: muestra menú horizontal y oculta botón hamburguesa */
+@media (min-width: 769px) {
+  .menu-list {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+  }
+  .menu-list li {
+    border: none;
+    margin: 0 15px;
+  }
+  .menu-list li a {
+    padding: 10px 0;
+    font-weight: 700;
+  }
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
+/* SECCIONES GENERALES */
+
+.frase-seccion {
+  padding: 40px 20px;
   text-align: center;
+  background-color: #fff;
+  margin-bottom: 20px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0;
+.frase1, .frase2 {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-nav a {
-  color: #ca3838;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* ================================
-   HERO
-================================ */
 .hero {
   text-align: center;
-  padding: 6rem 6rem 3rem;
-  background-image: url('Imagen1.jpeg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  color: #ffffff;
-  font-family: 'Cathalia', sans;
-  font-size: 3.5rem;
-  border-radius: 5px;
-  box-shadow: 0 0 1px rgba(100, 100, 500, 0.2);
-  height: 70vh;
-  max-height: 700px;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5e6e8, #fce8e6);
+  margin-bottom: 30px;
 }
 
-.hero h1 {
+.titulo-principal {
+  font-family: 'Cathalia', serif;
   font-size: 3rem;
-  margin-bottom: 0.3rem;
-  text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
+  color: #a239ca;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
+.subtitulo-principal {
+  font-family: 'Fragmentcore', sans-serif;
+  font-size: 1.8rem;
+  color: #5a2d82;
+  margin-bottom: 5px;
 }
 
-/* ================================
-   FRASES DESTACADAS
-================================ */
-.frase1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #f3842a;
-  font-family: 'Humber Town', sans-serif;
-  text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
-}
-
-.frase2 {
-  font-size: 2.9rem;
-  font-weight: bold;
-  color: #000;
-  text-align: center;
-  padding: 1rem;
-  font-style: italic;
-  font-family: 'Humber Town', serif;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* ================================
-   EVENTOS
-================================ */
-.evento {
-  background-color: #fff6f2;
-  border: 1px solid #e8bfae;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin: 1rem auto;
-  max-width: 500px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  font-family: 'Fragmentcore', serif;
-}
-
-.evento h3 {
-  color: #c75b12;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-
-.evento p {
-  color: #3b2f2f;
-  margin-bottom: 0.7rem;
-}
-
-.evento a {
-  color: #c75b12;
-  font-weight: bold;
-  text-decoration: underline;
-  font-size: 0.95rem;
-}
-
-/* ================================
-   GALERÍA
-================================ */
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.galeria img {
-  max-width: 100%;
-  width: 150px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* ================================
-   REGALOS
-================================ */
-#regalos {
-  border: 2px solid #e8bfae;
-  border-radius: 10px;
-  padding: 1.5rem 2rem;
-  max-width: 500px;
-  margin: 2rem auto;
-  background-color: #fff6f2;
-  box-shadow: 0 2px 8px rgba(194, 33, 91, 0.2);
-  text-align: center;
-}
-
-.btn, .btn-regalo {
-  background: #fd5a7d;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: 5px;
-}
-
-/* ================================
-   FORMULARIO DE CONFIRMACIÓN
-================================ */
-.form-container {
-  max-width: 100%;
-  overflow-x: auto;
-}
-
-.form-container iframe {
-  width: 100%;
-  min-height: 1500px;
-  border: none;
-}
-
-/* ================================
-   CONTADOR REGRESIVO
-================================ */
-#countdown-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+.fecha-principal {
+  font-weight: 600;
+  color: #7e54a0;
+  font-size: 1.2rem;
 }
 
 .countdown {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
 }
 
 .time-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff3ec;
-  padding: 1rem;
-  border-radius: 15px;
-  min-width: 80px;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
-}
-
-.time-box span {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #8a8b8a;
+  background-color: #a239ca;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 80px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .time-box small {
+  display: block;
+  font-weight: 400;
   font-size: 0.9rem;
-  color: #5e3b2c;
+  margin-top: 5px;
 }
 
 .separator {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #8a8b8a;
-}
-
-/* ================================
-   ITINERARIO Y SECCIONES VARIAS
-================================ */
-#itinerario,
-#codigo-vestimenta,
-#galeria,
-#regalos,
-#confirmacion {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-family: 'Fragmentcore', serif;
-}
-
-#itinerario h2 {
   font-size: 2rem;
-  color: #f3842a;
-  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #a239ca;
+  align-self: center;
 }
 
-/* ================================
-   FOOTER
-================================ */
-footer {
+.seccion-titulo {
+  font-family: 'Humber Town', sans-serif;
+  font-size: 2rem;
   text-align: center;
-  padding: 1rem 0;
-  background: #fd5a7d;
-  margin-top: 2rem;
+  margin-bottom: 25px;
+  color: #5a2d82;
 }
 
-/* ================================
-   RESPONSIVE GENERAL
-================================ */
-@media screen and (max-width: 768px) {
-  body {
-    padding: 2rem 1rem;
-  }
-
-  .menu-principal ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .menu-principal a {
-    font-size: 1.3rem;
-  }
-
-  .hero {
-    padding: 2rem 1rem;
-    font-size: 2rem;
-    height: auto;
-    background-size: cover;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  .frase1, .frase2 {
-    font-size: 1.6rem;
-    padding: 0.5rem;
-  }
-
-  .galeria {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .galeria img {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .form-container iframe {
-    min-height: 900px;
-  }
-
-  .countdown {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .time-box {
-    min-width: 60px;
-    padding: 0.8rem;
-  }
-
-  .time-box span {
-    font-size:
-::contentReference[oaicite:8]{index=8}
-
-  .time-box span {
-    font-size: 2rem;
-  }
-
-  .separator {
-    display: none;
-  }
+.evento {
+  background-color: #fff;
+  padding: 15px 25px;
+  margin: 10px auto;
+  max-width: 600px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* ================================
-   FIN DEL CSS
-================================ */
+.evento-titulo {
+  font-weight: 700;
+  color: #a239ca;
+  margin-bottom: 8px;
+}
+
+.evento-descripcion {
+  color: #555;
+}
+
+.texto-normal {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 10px 20px;
+  color: #333;
+}
+
+.texto-negrita {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #a239ca;
+  margin: 15px 0;
+}
+
+/* Galería */
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 0 20px 40px;
+}
+
+.galeria img {
+  max-width: 45%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Botón confirmación */
+.btn {
+  display: inline-block;
+  background-color: #a239ca;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  margin: 15px auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7e1fb0;
+}
+
+/* Form container */
+.form-container {
+  max-width: 700px;
+  margin: 20px auto 60px;
+  padding: 10px 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #5a2d82;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
