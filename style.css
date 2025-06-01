@@ -388,27 +388,26 @@ nav a {
 /* ================================
    CONTADOR REGRESIVO
 ================================ */
+/* CONTADOR REGRESIVO */
 #countdown-container {
   display: flex;
   justify-content: center;
+  overflow-x: auto;        /* Permite scroll horizontal si es necesario */
+  padding: 0 1rem;
   margin-top: 0;
-  width: 100vw;               /* Ocupa todo el ancho del viewport */
-  overflow-x: auto;          /* Permite scroll horizontal si es necesario */
-  padding: 0 0.5rem;           /* Pequeño padding para que no quede pegado al borde */
-  -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
 }
 
 .countdown {
-  display: inline-flex;      /* Flex en línea para que ocupe solo lo necesario */
+  display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   background: rgba(255, 255, 255, 0.2);
   padding: 1rem 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: max-content;   /* Evita que se recorte en pantallas pequeñas */
   flex-wrap: nowrap;
-  min-width: max-content;   /* Ancho mínimo para evitar corte */
 }
 
 .time-box {
@@ -423,7 +422,7 @@ nav a {
 }
 
 .time-box span {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #8a8b8a;
 }
@@ -434,24 +433,21 @@ nav a {
 }
 
 .separator {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #8a8b8a;
 }
 
-/* Ajustes para móviles */
+/* Ajuste adicional para pantallas pequeñas */
 @media (max-width: 600px) {
-  #countdown-container {
-    /* Ya definidos arriba para móvil */
-  }
-
   .countdown {
-    /* Ya definido arriba */
+    gap: 0.8rem;
+    padding: 0.5rem 1rem;
   }
 
   .time-box {
-    min-width: 60px;
-    padding: 0.4rem;
+    min-width: 70px;
+    padding: 0.6rem;
   }
 
   .time-box span {
