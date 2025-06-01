@@ -438,6 +438,30 @@ nav a {
     font-size: 1.2rem;
   }
 }
+@media (max-width: 600px) {
+  #countdown-container {
+    overflow-x: auto;
+    padding: 0 1rem;
+  }
+
+  .countdown {
+    flex-wrap: nowrap;
+    min-width: max-content;
+  }
+
+  .time-box {
+    min-width: 70px;
+    padding: 0.5rem;
+  }
+
+  .time-box span {
+    font-size: 2rem;
+  }
+
+  .separator {
+    font-size: 2rem;
+  }
+}
 
 /* ================================
    ITINERARIO Y SECCIONES VARIAS
