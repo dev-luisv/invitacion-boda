@@ -95,6 +95,12 @@
   font-family: 'Farmhouse';
   src: url('fonts/Farmhouse.otf') format('opentype');
 }
+
+@font-face {
+  font-family: 'simplicity';
+  src: url('fonts/simplicity.ttf') format('opentype');
+}
+
 /* ================================
    RESETEO GLOBAL Y BODY
 ================================ */
@@ -264,7 +270,7 @@ nav a {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #000000;
-  font-family: 'Halimun', sans-serif;
+  font-family: 'simplicity', sans-serif;
   text-shadow: 0 2px 4px #86895d;
   text-align: center; 
 }
@@ -276,7 +282,7 @@ nav a {
   text-align: center;
   padding: 1rem;
   font-style: italic;
-  font-family: 'Halimun', sans-serif;
+  font-family: 'simplicity', sans-serif;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   text-align: center; 
 }
