@@ -193,23 +193,35 @@ body {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
   .menu-principal .menu-toggle {
-    display: block;
+    display: block; /* corregido */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .menu-principal {
+    position: relative; /* para el posicionamiento absoluto del menú */
   }
 
   .menu-principal .menu-list {
     display: none;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 60px;
+    position: absolute; /* para que el menú se superponga */
+    top: 100%; /* debajo de la barra */
     left: 0;
     right: 0;
     background-color: #333;
-    z-index: 10;
+    z-index: 1000;
+    max-height: 70vh; /* limita altura */
+    overflow-y: auto; /* scroll vertical si hay muchas opciones */
+    border-radius: 0 0 8px 8px;
   }
 
   .menu-principal .menu-list.active {
-    display: flex;
+    display: flex; /* mantener flex para estructura vertical */
   }
 
   .menu-principal .menu-list li {
@@ -220,7 +232,6 @@ body {
     font-size: 18px;
   }
 }
-
 /* ================================
    HEADER
 ================================ */
