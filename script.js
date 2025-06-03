@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   // === 1) Menú hamburguesa ===
-  const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".menu-list");
-  if (toggle && menu) {
-    toggle.addEventListener("click", function () {
-      menu.classList.toggle("menu-open");
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const menuList = document.querySelector(".menu-list");
+
+  if (toggleBtn && menuList) {
+    toggleBtn.addEventListener('click', () => {
+      menuList.classList.toggle('active');
     });
   }
 
@@ -46,15 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const timer = setInterval(updateCountdown, 1000);
 
   // === 3) Ocultar menú al hacer clic en enlaces ===
-  const toggleButton = document.querySelector('.menu-principal .menu-toggle');
-  const menuList     = document.querySelector('.menu-principal .menu-list');
-  const links        = document.querySelectorAll('.menu-principal .menu-list a');
+  const links = document.querySelectorAll('.menu-list a');
 
-  if (toggleButton && menuList) {
-    toggleButton.addEventListener('click', () => {
-      menuList.classList.toggle('active');
-    });
-
+  if (menuList && links.length) {
     links.forEach(link => {
       link.addEventListener('click', () => {
         menuList.classList.remove('active');
@@ -75,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
         sobreContainer.style.display = 'none';
         mainContent.style.display    = 'block';
 
-        // Refrescar AOS (animaciones) si está disponible
         if (typeof AOS !== 'undefined' && AOS.refreshHard) {
           AOS.refreshHard();
         }

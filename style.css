@@ -570,17 +570,6 @@ Ubicacion
     padding: 2rem 1rem;
   }
 
-  .menu-principal ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .menu-principal a {
-    font-size: 1.3rem;
-  }
-
   .hero {
     padding: 2rem 1rem;
     font-size: 2rem;
