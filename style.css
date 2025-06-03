@@ -129,7 +129,7 @@ html, body {
   font-style: italic;
   line-height: 1.6;
   background: #ffffff;
-  color: #65b962;
+  color: #000000;
   padding: 4rem 1rem 3rem;
   border-radius: 8px;
   font-weight: normal;
@@ -276,7 +276,7 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 8rem;
+  font-size: 14rem;
   margin-bottom: 0rem;
   text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
 }
@@ -343,9 +343,6 @@ b
   font-size: 0.95rem;
 }
 
-/* ================================
-   GALERÍA
-================================ */
 /* ================================
    GALERÍA
 ================================ */
