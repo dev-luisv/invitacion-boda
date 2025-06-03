@@ -30,6 +30,30 @@
 </head>
 <body>
 
+  <!-- Botón para reproducir música en móviles -->
+<button id="btnPlay" style="display:none; position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; background:#86895d; color: white; border:none; border-radius:5px; cursor:pointer; z-index: 2000;">
+  🎵 Escuchar música
+</button>
+
+<!-- Audio sin controles para que suene en loop -->
+<audio id="musica" src="audio/Reik_Sabes.mp3" loop></audio>
+
+<script>
+  const btnPlay = document.getElementById('btnPlay');
+  const musica = document.getElementById('musica');
+
+  // Intentamos reproducir automáticamente
+  musica.play().catch(() => {
+    // Si falla (por bloqueo autoplay), muestra el botón para que el usuario lo active
+    btnPlay.style.display = 'block';
+  });
+
+  btnPlay.addEventListener('click', () => {
+    musica.play();
+    btnPlay.style.display = 'none'; // Oculta botón tras iniciar
+  });
+</script>
+
   <!-- Sobre animado -->
   <div id="sobre-container">
     <div id="sobre">
@@ -38,7 +62,6 @@
       <button id="abrir-sobre" aria-label="Abrir la invitación">Abrir Invitación</button>
     </div>
   </div>
-
   <!-- Contenido principal oculto al cargar -->
   <div id="main-content" style="display:none;" data-aos="fade-in">
 
