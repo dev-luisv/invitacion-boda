@@ -290,19 +290,30 @@ nav a {
 }
 
 /* Si quieres conservar el background-size: contain en móviles, mantenlo */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  .hero {
+    background-size: cover;          /* llena todo el contenedor */
+    background-position: center;     /* centrada */
+    background-repeat: no-repeat;
+    padding: 1.5rem;
+    min-height: 100vh;               /* alto completo de pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .hero h1 {
-    font-size: 2rem; /* Ajusta este valor según tus necesidades */
-    line-height: 1.2; /* Mejora la legibilidad */
-    text-align: center; /* Centra el texto si es necesario */
+    font-size: 2rem;
+    line-height: 1.2;
   }
 
   .hero p {
-    font-size: 1rem; /* Ajusta este valor según tus necesidades */
-    line-height: 1.5;
-    text-align: center;
+    font-size: 1rem;
   }
 }
+
 /* ================================
    FRASES DESTACADAS
 ================================ */
