@@ -1,5 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // === 1) Contador regresivo ===
+document.addEventListener("DOMContentLoaded", function () {
+  // === 1) Menú hamburguesa ===
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu-list");
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("menu-open");
+    });
+  }
+
+  // === 2) Contador regresivo ===
   const targetDate = new Date('2025-08-16T00:00:00');
 
   function updateCountdown() {
@@ -11,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const minutesEl = document.getElementById('minutes');
     const secondsEl = document.getElementById('seconds');
 
-    // Validar que los elementos existan
     if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
     if (diff <= 0) {
@@ -37,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCountdown();
   const timer = setInterval(updateCountdown, 1000);
 
-  // === 2) Menú hamburguesa ===
+  // === 3) Ocultar menú al hacer clic en enlaces ===
   const toggleButton = document.querySelector('.menu-principal .menu-toggle');
   const menuList     = document.querySelector('.menu-principal .menu-list');
   const links        = document.querySelectorAll('.menu-principal .menu-list a');
@@ -54,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // === 3) Lógica del sobre de bienvenida ===
+  // === 4) Lógica del sobre de bienvenida ===
   const abrirSobreBtn  = document.getElementById('abrir-sobre');
   const sobre          = document.getElementById('sobre');
   const sobreContainer = document.getElementById('sobre-container');
@@ -66,6 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         sobreContainer.style.display = 'none';
         mainContent.style.display    = 'block';
+
+        // Refrescar AOS (animaciones) si está disponible
         if (typeof AOS !== 'undefined' && AOS.refreshHard) {
           AOS.refreshHard();
         }
