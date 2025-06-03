@@ -265,7 +265,7 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: 11rem;
   margin-bottom: 0.3rem;
   text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
 }
@@ -282,15 +282,15 @@ nav a {
 .frase1 {
   font-size: 1.2rem;
   margin-bottom: 0.1rem;
-  color: #000000;
+  color: #000;
   font-family: 'Fragmentcore', sans-serif;
-  text-shadow: 0 1px 2px #86895d;
   text-align: center; 
+  font-weight: normal;
 }
 
 .frase2 {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: normal;
   color: #000;
   text-align: center;
   padding: 1rem;
