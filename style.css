@@ -138,12 +138,12 @@ html, body {
 /* ================================
    MENU PRINCIPAL
 ================================ */
-/* Menú principal */
 .menu-principal {
   position: relative;
   background-color: #86895d;
   padding: 10px;
   text-align: center;
+   font-family: 'simplicity', sans-serif; /
 }
 
 .menu-principal .menu-toggle {
@@ -206,7 +206,7 @@ html, body {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #333;
+    background-color: #86895d;
     z-index: 1150;        /* entre el botón y la imagen */
     max-height: 70vh;
     overflow-y: auto;
@@ -290,31 +290,19 @@ nav a {
 }
 
 /* Si quieres conservar el background-size: contain en móviles, mantenlo */
-@media (max-width: 768px) {
-  .hero {
-    background-size: contain;
-    padding: 1.5rem;
-    height: auto;
-    min-height: 60vh;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 50vh;
-    padding: 1rem;
-  }
-}
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero h1 {
-    font-size: 28px; /* más grande o más legible para móvil */
+    font-size: 2rem; /* Ajusta este valor según tus necesidades */
+    line-height: 1.2; /* Mejora la legibilidad */
+    text-align: center; /* Centra el texto si es necesario */
   }
-  
+
   .hero p {
-    font-size: 16px;
+    font-size: 1rem; /* Ajusta este valor según tus necesidades */
+    line-height: 1.5;
+    text-align: center;
   }
 }
-
 /* ================================
    FRASES DESTACADAS
 ================================ */
@@ -538,15 +526,28 @@ nav a {
    ITINERARIO Y SECCIONES VARIAS
 ================================ */
 #itinerario,
-#codigo-vestimenta,
 #galeria,
 #regalos,
-#confirmacion {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-family: 'Fragmentcore', serif;
+#codigo-vestimenta .seccion-titulo {
+  font-size: 2rem;
+  color: #86895d;
+  margin-bottom: 0.2rem; /* reducido */
 }
 
+#codigo-vestimenta .texto-normal {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 0; /* sin separación extra */
+  text-align: center;
+  line-height: 1.1; /* más compacto aún si lo deseas */
+  font-size: 1.3rem;
+}
+#confirmacion {
+  text-align: center;
+  padding: 0.1rem 0.1rem;
+  font-family: 'Fragmentcore', serif;
+  line-height: 1
+}
 #itinerario h2 {
   font-size: 2rem;
   color: #86895d;
