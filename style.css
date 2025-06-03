@@ -249,30 +249,41 @@ nav a {
    HERO
 ================================ */
 .hero {
-  text-align: center;
-  padding: 13rem 13rem 3rem;
+  display: flex;                 /* activar flexbox */
+  flex-direction: column;        /* para que texto se apile verticalmente */
+  justify-content: center;       /* centrar verticalmente */
+  align-items: center;           /* centrar horizontalmente */
+  text-align: center;            /* centrar texto */
+  
+  padding: 3rem;                 /* padding más razonable */
+  
   background-image: url('Imagen1.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 60% auto;;
+  background-size: 80% auto;
+  
   color: #ffffff;
-  font-family: 'Farmhouse', sans-serif; 
-  font-size: 5.0rem;
+  font-family: 'Farmhouse', sans-serif;
+  font-size: 2rem;               /* tamaño legible */
+  
   border-radius: 9px;
   box-shadow: 0 0 1px rgba(120, 120, 500, 0.1);
+  
   height: 100vh;
   max-height: 700px;
+  
+  margin-bottom: 0;
 }
 
 .hero h1 {
-  font-size: 11rem;
-  margin-bottom: 0.3rem;
+  font-size: 8rem;
+  margin-bottom: 0rem;
   text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
 }
 
 .hero p {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 8rem;
+  margin-bottom: 0rem;
   text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
 }
 
