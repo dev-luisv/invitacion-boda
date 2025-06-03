@@ -34,15 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuList = document.querySelector('.menu-list');
   const links = document.querySelectorAll('.menu-list a');
 
-  toggleButton.addEventListener('click', () => {
-    menuList.classList.toggle('active');
-  });
-
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      menuList.classList.remove('active');
+  // Verifica que el botón de menú y lista existen antes de agregar listeners
+  if (toggleButton && menuList) {
+    toggleButton.addEventListener('click', () => {
+      menuList.classList.toggle('active');
     });
-  });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuList.classList.remove('active');
+      });
+    });
+  }
 
   // Evento para abrir el sobre
   const abrirSobreBtn = document.getElementById('abrir-sobre');
@@ -50,13 +53,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const sobreContainer = document.getElementById('sobre-container');
   const mainContent = document.getElementById('main-content');
 
-  abrirSobreBtn.addEventListener('click', () => {
-    sobre.classList.add('open');
+  // Asegúrate de que los elementos existen antes de añadir el evento
+  if (abrirSobreBtn && sobre && sobreContainer && mainContent) {
+    abrirSobreBtn.addEventListener('click', () => {
+      sobre.classList.add('open');
 
-    setTimeout(() => {
-      sobreContainer.style.display = 'none';
-      mainContent.style.display = 'block';
-      AOS.refreshHard(); // refresca animaciones AOS después de mostrar contenido
-    }, 1000);
-  });
+      setTimeout(() => {
+        sobreContainer.style.display = 'none';
+        mainContent.style.display = 'block';
+        if (typeof AOS !== 'undefined' && AOS.refreshHard) {
+          AOS.refreshHard(); // Refresca animaciones solo si AOS está definido
+        }
+      }, 1000);
+    });
+  }
 });
