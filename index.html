@@ -5,50 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Miriam & Luis - Invitación de Boda</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Sobre antes de mostrar el contenido -->
+  <!-- Sobre animado -->
   <div id="sobre-container">
     <div id="sobre">
-      <div id="solapa"></div>
-      <div id="cuerpo-sobre"></div>
+      <div id="solapa"></div>  <!-- La tapa del sobre -->
+      <div id="cuerpo-sobre"></div> <!-- Cuerpo del sobre -->
       <button id="abrir-sobre">Abrir Invitación</button>
     </div>
   </div>
 
   <!-- Contenido principal oculto al cargar -->
-  <div id="main-content" style="display:none;">
+  <div id="main-content" style="display:none;" data-aos="fade-in">
+
     <!-- Encabezado y menú -->
-    <nav class="menu-principal">
+    <nav class="menu-principal" data-aos="fade-down">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <ul class="menu-list">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#itinerario">Itinerario</a></li>
-        <li><a href="#codigo-vestimenta">Codigo de vestimenta</a></li>
+        <li><a href="#codigo-vestimenta">Código de vestimenta</a></li>
         <li><a href="#regalos">Regalos</a></li>
         <li><a href="#confirmacion">Confirmación</a></li>
       </ul>
     </nav>
 
     <!-- Frase inicial -->
-    <section id="frase1" class="frase-seccion">
+    <section id="frase1" class="frase-seccion" data-aos="fade-up">
       <h2 class="frase1">El amor es solo una palabra, hasta que llega alguien y le da sentido.</h2>
     </section>
 
     <!-- Hero principal -->
     <main>
-      <section class="hero" id="inicio">
+      <section class="hero" id="inicio" data-aos="zoom-in">
         <h1 class="titulo-principal">Miriam & Luis</h1>
         <p class="subtitulo-principal">¡Nos casamos!</p>
         <p class="fecha-principal">16 de agosto de 2025</p>
       </section>
-       <!-- texto-->
-        <section id="faltan" class="frase-seccion">
+
+      <!-- texto -->
+      <section id="faltan" class="frase-seccion" data-aos="fade-up">
         <h2 class="faltan">Faltan</h2>
       </section>
+
       <!-- Cuenta regresiva -->
-      <section id="countdown-container">
+      <section id="countdown-container" data-aos="fade-up">
         <div class="countdown">
           <div class="time-box">
             <span id="days">92</span>
@@ -73,14 +78,14 @@
       </section>
 
       <!-- Frase intermedia -->
-      <section id="frase2" class="frase-seccion">
+      <section id="frase2" class="frase-seccion" data-aos="fade-up">
         <h2 class="frase2">
           Hay momentos en la vida que son muy especiales por sí solos, pero al compartirlos con personas como tú, se convierten en momentos imposibles de olvidar.
         </h2>
       </section>
 
       <!-- Itinerario -->
-      <section id="itinerario">
+      <section id="itinerario" data-aos="fade-up">
         <h2 class="seccion-titulo">ITINERARIO</h2>
         <div class="evento">
           <h3 class="evento-titulo">CEREMONIA CIVIL</h3>
@@ -101,13 +106,13 @@
       </section>
 
       <!-- Código de vestimenta -->
-      <section id="codigo-vestimenta">
+      <section id="codigo-vestimenta" data-aos="fade-right">
         <h2 class="seccion-titulo">Código de vestimenta</h2>
         <p class="texto-normal"><strong>Semiformal / Cocktail</strong></p>
       </section>
 
       <!-- Galería de imágenes -->
-      <section id="galeria">
+      <section id="galeria" data-aos="zoom-in">
         <div class="galeria">
           <img src="img1.jpeg" alt="Foto de Miriam y Luis 1" />
           <img src="img2.jpeg" alt="Foto de Miriam y Luis 2" />
@@ -115,7 +120,7 @@
       </section>
 
       <!-- Mesa de regalos -->
-      <section id="regalos">
+      <section id="regalos" data-aos="fade-up">
         <h2 class="seccion-titulo">REGALOS</h2>
         <p class="texto-normal">¡El regalo es opcional, la asistencia obligatoria!</p>
         <p class="texto-normal">Pero si quieres tener un detalle con nosotros, ¡suma kilómetros a nuestro viaje!</p>
@@ -126,8 +131,8 @@
         </p>
       </section>
 
-      <!-- Ubicacion -->
-      <section id="ubicacion">
+      <!-- Ubicación -->
+      <section id="ubicacion" data-aos="fade-left">
         <h2 class="seccion-titulo">Ubicación</h2>
         <div class="mapa-container">
           <iframe 
@@ -138,7 +143,7 @@
       </section>
 
       <!-- Confirmación -->
-      <section id="confirmacion">
+      <section id="confirmacion" data-aos="fade-up">
         <h2 class="seccion-titulo">CONFIRMAR ASISTENCIA</h2>
         <p class="texto-normal">Confirma tu asistencia antes del día <strong>30 de junio</strong>.</p>
         <a href="#confirmacion" class="btn">CONFIRMA TU ASISTENCIA</a>
@@ -153,11 +158,18 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer data-aos="fade-up">
       <p>&copy; 2025 Miriam & Luis</p>
     </footer>
   </div>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
