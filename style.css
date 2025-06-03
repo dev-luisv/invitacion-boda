@@ -267,12 +267,10 @@ nav a {
   font-size: 2rem;
 
   border-radius: 9px;
-  box-shadow: 0 0 1px rgba(120, 120, 120, 0.1); /* corregido valor rgba */
+  box-shadow: 0 0 1px rgba(120, 120, 120, 0.1);
 
-  /* Evitar altura enorme */
-  height: 100vh;       /* ocupa toda la pantalla vertical */
-  max-height: 1000px;  /* máximo 1000px */
-
+  height: 100vh;
+  max-height: 1000px;
   margin-bottom: 0;
 }
 
@@ -291,16 +289,16 @@ nav a {
 /* Media queries para móviles */
 @media (max-width: 768px) {
   .hero {
-    background-size: contain;  /* que la imagen no se corte en móviles */
+    background-size: contain;
     padding: 1.5rem;
     height: auto;
     min-height: 60vh;
   }
   .hero h1 {
-    font-size: 5rem;
+    font-size: 6rem;   /* en lugar de 1.8rem */
   }
   .hero p {
-    font-size: 2.5rem;
+    font-size: 3rem;   /* en lugar de 1.2rem */
   }
 }
 
@@ -310,10 +308,10 @@ nav a {
     padding: 1rem;
   }
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: 5rem;   /* en lugar de 1.8rem */
   }
   .hero p {
-    font-size: 1.8rem;
+    font-size: 2.5rem; /* en lugar de 1.2rem */
   }
 }
 
