@@ -306,13 +306,13 @@ nav a {
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 11vw, 20rem);  /* Tamaño adaptativo */
+    font-size: clamp(10rem, 11vw, 40rem);  /* Tamaño adaptativo */
     line-height: 1.2;
     margin-bottom: 1rem;
   }
 
   .hero p {
-    font-size: clamp(2rem, 8vw, 20rem); /* Tamaño adaptativo */
+    font-size: clamp(10rem, 8vw, 40rem); /* Tamaño adaptativo */
     margin-bottom: 0;
   }
 }
