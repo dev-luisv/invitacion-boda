@@ -7,15 +7,35 @@
   <link rel="stylesheet" href="style.css" />
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* Estilo responsivo para Google Maps */
+    .mapa-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Relación 16:9 */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .mapa-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Sobre animado -->
   <div id="sobre-container">
     <div id="sobre">
-      <div id="solapa"></div>  <!-- La tapa del sobre -->
-      <div id="cuerpo-sobre"></div> <!-- Cuerpo del sobre -->
-      <button id="abrir-sobre">Abrir Invitación</button>
+      <div id="solapa"></div>
+      <div id="cuerpo-sobre"></div>
+      <button id="abrir-sobre" aria-label="Abrir la invitación">Abrir Invitación</button>
     </div>
   </div>
 
@@ -24,7 +44,7 @@
 
     <!-- Encabezado y menú -->
     <nav class="menu-principal" data-aos="fade-down">
-      <button class="menu-toggle" >☰</button>
+      <button class="menu-toggle" aria-label="Abrir menú de navegación">☰</button>
       <ul class="menu-list">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#itinerario">Itinerario</a></li>
@@ -47,7 +67,6 @@
         <p class="fecha-principal">16 de agosto de 2025</p>
       </section>
 
-      <!-- texto -->
       <section id="faltan" class="frase-seccion" data-aos="fade-up">
         <h2 class="faltan">Faltan</h2>
       </section>
@@ -111,7 +130,7 @@
         <p class="texto-normal"><strong>Semiformal / Cocktail</strong></p>
       </section>
 
-      <!-- Galería de imágenes -->
+      <!-- Galería -->
       <section id="galeria" data-aos="zoom-in">
         <div class="galeria">
           <img src="img3.jpeg" alt="Foto de Miriam y Luis 1" />
@@ -121,7 +140,7 @@
       <!-- Mesa de regalos -->
       <section id="regalos" data-aos="fade-up">
         <h2 class="seccion-titulo">REGALOS</h2>
-        <p class="texto-normal">Gracias por tu compañia en nuestra nueva etapa.</p>
+        <p class="texto-normal">Gracias por tu compañía en nuestra nueva etapa.</p>
         <p class="texto-normal">Si quieres tener un detalle con nosotros, ¡suma kilómetros a nuestro viaje!</p>
         <p class="texto-normal">
           <strong>BANORTE</strong><br>
@@ -136,7 +155,7 @@
         <div class="mapa-container">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.513776146562!2d-100.35991539999999!3d20.6893514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d359654527ed35%3A0xe89cc0b0ba592b6!2sQuinta%20Los%20Arcos!5e0!3m2!1ses-419!2smx!4v1748812297035!5m2!1ses-419!2smx" 
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </section>
@@ -161,12 +180,14 @@
   </div>
 
   <!-- Scripts -->
-  <script src="script.js"></script>
   <!-- AOS Script -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+  <!-- Tu script principal -->
+  <script src="script.js"></script>
 
 </body>
 </html>
