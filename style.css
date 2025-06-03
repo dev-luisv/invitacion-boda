@@ -249,12 +249,11 @@ nav a {
    HERO
 ================================ */
 .hero {
-  display: flex;                 /* activar flexbox */
-  flex-direction: column;        /* texto apilado verticalmente */
-  justify-content: center;       /* centrar verticalmente */
-  align-items: center;           /* centrar horizontalmente */
-  text-align: center;            /* centrar texto */
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 3rem;
 
   background-image: url('Imagen1.jpeg');
@@ -275,18 +274,18 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 14rem;
+  font-size: clamp(3rem, 10vw, 14rem);
   margin-bottom: 0;
   line-height: 1;
 }
 
 .hero p {
-  font-size: 8rem;
+  font-size: clamp(1.5rem, 5vw, 8rem);
   margin-bottom: 0;
   line-height: 1;
 }
 
-/* Media queries para móviles */
+/* Si quieres conservar el background-size: contain en móviles, mantenlo */
 @media (max-width: 768px) {
   .hero {
     background-size: contain;
@@ -294,24 +293,12 @@ nav a {
     height: auto;
     min-height: 60vh;
   }
-  .hero h1 {
-    font-size: 6rem;   /* en lugar de 1.8rem */
-  }
-  .hero p {
-    font-size: 3rem;   /* en lugar de 1.2rem */
-  }
 }
 
 @media (max-width: 480px) {
   .hero {
     min-height: 50vh;
     padding: 1rem;
-  }
-  .hero h1 {
-    font-size: 5rem;   /* en lugar de 1.8rem */
-  }
-  .hero p {
-    font-size: 2.5rem; /* en lugar de 1.2rem */
   }
 }
 
@@ -359,7 +346,7 @@ nav a {
 }
 
 .evento p {
-  color: #49b180a2;
+  color: #000000;
   margin-bottom: 0.7rem;
 }
 
@@ -387,7 +374,7 @@ nav a {
   max-width: 10%; /* Más pequeñas */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #86895d;
   transition: transform 0.3s ease;
 }
 
@@ -405,7 +392,7 @@ nav a {
    REGALOS
 ================================ */
 #regalos {
-  border: 2px solid #e8bfae;
+  border: 2px solid #86895d;
   border-radius: 10px;
   padding: 1.5rem 2rem;
   max-width: 500px;
@@ -413,10 +400,15 @@ nav a {
   background-color: #fff6f2;
   box-shadow: 0 2px 8px rgba(194, 33, 91, 0.2);
   text-align: center;
+  color: #df6c2a;
 }
 
+/* Solo cambia el color del <h2> dentro de la sección Regalos */
+#regalos .texto-normal {
+  color: #000000;
+}
 .btn, .btn-regalo {
-  background: #fd5a7d;
+  background: #86895d;
   color: white;
   padding: 0.8rem 1.2rem;
   border: none;
@@ -554,7 +546,7 @@ nav a {
 footer {
   text-align: center;
   padding: 1rem 0;
-  background: #fd5a7d;
+  background: #86895d;
   margin-top: 2rem;
 }
 
