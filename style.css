@@ -263,7 +263,7 @@ nav a {
   background-image: url('Imagen1.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: 80% auto;
 
   color: #ffffff;
   font-family: 'Farmhouse', sans-serif;
@@ -272,32 +272,30 @@ nav a {
   border-radius: 9px;
   box-shadow: 0 0 1px rgba(120, 120, 120, 0.1);
 
-  height: 100vh;
+  height: 100vh;  /* importante para que tome toda la pantalla */
   max-height: 1000px;
   margin-bottom: 0;
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 10vw, 14rem);
-  margin-bottom: 0;
-  line-height: 1;
+  font-size: clamp(5rem, 11vw, 10rem);  /* Tamaño adaptativo */
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: clamp(1.5rem, 5vw, 8rem);
+  font-size: clamp(3rem, 8vw, 6rem); /* Tamaño adaptativo */
   margin-bottom: 0;
-  line-height: 1;
 }
 
-/* Si quieres conservar el background-size: contain en móviles, mantenlo */
+/* Móvil */
 @media (max-width: 768px) {
   .hero {
-    background-size: cover;            /* Cubre todo el contenedor */
-    background-position: center;
+    background-size: cover;          
+    background-position: center;     
     background-repeat: no-repeat;
-    padding: 2rem 1rem;
-    min-height: 100vh;                 /* Altura de toda la pantalla */
-    
+    padding: 1rem 1.5rem;   /* menos padding para más espacio */
+    min-height: 110vh;     /* aumenta un poco la altura para más espacio */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -306,17 +304,15 @@ nav a {
   }
 
   .hero h1 {
-    font-size: clamp(10rem, 11vw, 40rem);  /* Tamaño adaptativo */
+    font-size: 4.5rem !important; /* tamaño grande en móvil */
     line-height: 1.2;
-    margin-bottom: 1rem;
   }
 
   .hero p {
-    font-size: clamp(10rem, 8vw, 40rem); /* Tamaño adaptativo */
-    margin-bottom: 0;
+    font-size: 2.5rem !important; /* tamaño grande en móvil */
+    margin-top: 0;
   }
 }
-
 /* ================================
    FRASES DESTACADAS
 ================================ */
