@@ -305,6 +305,15 @@ nav a {
     padding: 1rem;
   }
 }
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px; /* más grande o más legible para móvil */
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+}
 
 /* ================================
    FRASES DESTACADAS
