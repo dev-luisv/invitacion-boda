@@ -263,7 +263,7 @@ nav a {
   background-image: url('Imagen1.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 80% auto;
+  background-size: cover;
 
   color: #ffffff;
   font-family: 'Farmhouse', sans-serif;
@@ -292,11 +292,12 @@ nav a {
 /* Si quieres conservar el background-size: contain en móviles, mantenlo */
 @media (max-width: 768px) {
   .hero {
-    background-size: cover;          /* llena todo el contenedor */
-    background-position: center;     /* centrada */
+    background-size: cover;            /* Cubre todo el contenedor */
+    background-position: center;
     background-repeat: no-repeat;
-    padding: 1.5rem;
-    min-height: 100vh;               /* alto completo de pantalla */
+    padding: 2rem 1rem;
+    min-height: 100vh;                 /* Altura de toda la pantalla */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -305,12 +306,14 @@ nav a {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: clamp(2rem, 8vw, 3rem);  /* Tamaño adaptativo */
     line-height: 1.2;
+    margin-bottom: 1rem;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: clamp(1rem, 5vw, 1.5rem); /* Tamaño adaptativo */
+    margin-bottom: 0;
   }
 }
 
