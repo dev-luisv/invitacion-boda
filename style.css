@@ -586,6 +586,8 @@ Ubicacion
 
 .seccion-titulo {
   text-align: center;
+  color: #86895d;
+  font-size: 2rem;
 }
 /* ================================
    RESPONSIVE GENERAL
