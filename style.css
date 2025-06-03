@@ -138,7 +138,6 @@ html, body {
 /* ================================
    MENU PRINCIPAL
 ================================ */
-
 /* Estilos generales */
 body {
   font-family: 'Fragmentcore', sans-serif;
@@ -193,7 +192,7 @@ body {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
   .menu-principal .menu-toggle {
-    display: block; /* corregido */
+    display: block; /* Mostrar botón hamburguesa */
     background: none;
     border: none;
     color: #fff;
@@ -206,22 +205,22 @@ body {
   }
 
   .menu-principal .menu-list {
-    display: none;
+    display: none; /* ocultar menú por defecto */
     flex-direction: column;
     align-items: center;
     position: absolute; /* para que el menú se superponga */
-    top: 100%; /* debajo de la barra */
+    top: 100%; /* justo debajo de la barra */
     left: 0;
     right: 0;
     background-color: #333;
     z-index: 1000;
-    max-height: 70vh; /* limita altura */
-    overflow-y: auto; /* scroll vertical si hay muchas opciones */
+    max-height: 70vh; /* limita altura del menú */
+    overflow-y: auto; /* scroll si hay muchas opciones */
     border-radius: 0 0 8px 8px;
   }
 
   .menu-principal .menu-list.active {
-    display: flex; /* mantener flex para estructura vertical */
+    display: flex; /* mostrar menú activo con flex */
   }
 
   .menu-principal .menu-list li {
@@ -232,6 +231,7 @@ body {
     font-size: 18px;
   }
 }
+
 /* ================================
    HEADER
 ================================ */
