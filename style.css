@@ -250,41 +250,71 @@ nav a {
 ================================ */
 .hero {
   display: flex;                 /* activar flexbox */
-  flex-direction: column;        /* para que texto se apile verticalmente */
+  flex-direction: column;        /* texto apilado verticalmente */
   justify-content: center;       /* centrar verticalmente */
   align-items: center;           /* centrar horizontalmente */
   text-align: center;            /* centrar texto */
-  
-  padding: 3rem;                 /* padding más razonable */
-  
+
+  padding: 3rem;
+
   background-image: url('Imagen1.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 80% auto;
-  
+
   color: #ffffff;
   font-family: 'Farmhouse', sans-serif;
-  font-size: 2rem;               /* tamaño legible */
-  
+  font-size: 2rem;
+
   border-radius: 9px;
-  box-shadow: 0 0 1px rgba(120, 120, 500, 0.1);
-  
-  height: 1000vh;
-  max-height: 1000px;
-  
+  box-shadow: 0 0 1px rgba(120, 120, 120, 0.1); /* corregido valor rgba */
+
+  /* Evitar altura enorme */
+  height: 100vh;       /* ocupa toda la pantalla vertical */
+  max-height: 1000px;  /* máximo 1000px */
+
   margin-bottom: 0;
 }
 
 .hero h1 {
   font-size: 14rem;
-  margin-bottom: 0rem;
-  text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
+  margin-bottom: 0;
+  line-height: 1;
 }
 
 .hero p {
   font-size: 8rem;
-  margin-bottom: 0rem;
-  text-shadow: 0 2px 4px rgba(194, 240, 110, 0.5);
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  .hero {
+    background-size: contain;  /* que la imagen no se corte en móviles */
+    padding: 1.5rem;
+    height: auto;
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 5rem;
+  }
+  .hero p {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 50vh;
+    padding: 1rem;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero p {
+    font-size: 1.8rem;
+  }
 }
 
 /* ================================
