@@ -269,8 +269,8 @@ nav a {
   border-radius: 9px;
   box-shadow: 0 0 1px rgba(120, 120, 500, 0.1);
   
-  height: 100vh;
-  max-height: 700px;
+  height: 1000vh;
+  max-height: 1000px;
   
   margin-bottom: 0;
 }
