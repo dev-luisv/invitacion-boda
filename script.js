@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { 
   // === 1) Menú hamburguesa ===
   const toggleBtn = document.querySelector(".menu-toggle");
   const menuList = document.querySelector(".menu-list");
@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // === 2) Contador regresivo ===
   const targetDate = new Date('2025-08-16T00:00:00');
+
+  // FIX: declarar timer antes de usarlo
+  let timer = null;
 
   function updateCountdown() {
     const now  = new Date();
@@ -28,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
       hoursEl.textContent   = '00';
       minutesEl.textContent = '00';
       secondsEl.textContent = '00';
-      clearInterval(timer);
-      return;
+      clearInterval(timer);   // ahora es seguro, aunque sea null
+      return;                 // puedes dejarlo si quieres
     }
 
     const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -44,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   updateCountdown();
-  const timer = setInterval(updateCountdown, 1000);
+  // FIX: asignar el intervalo DESPUÉS usando la variable ya declarada
+  timer = setInterval(updateCountdown, 1000);
 
   // === 3) Ocultar menú al hacer clic en enlaces ===
   const links = document.querySelectorAll('.menu-list a');
